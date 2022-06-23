@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: DMSans;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: DMSans;
+    src: url('../font/DMSans-Regular.ttf');
+}
+
+body{
+    width: 100%;
+    background-color: hsl(27, 66%, 92%);
+    font-size: 18px;
+
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.balance-box{
+    width: 550px;
+    background-color:  hsl(10, 79%, 65%);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-box .price-box {
+    color: hsl(33, 100%, 98%);
+}
+
+.balance-box .price-box p{
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.balance-box .price-box h6{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 5px 0 0 5px;
+}
+
+.balance-box .cirlce-box{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.balance-box .cirlce-box span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: hsl(25, 47%, 15%);
+    border: 2px solid hsl(25, 47%, 15%);
+}
+
+.balance-box .cirlce-box span:last-child{
+    border: 2px solid hsl(33, 100%, 98%);
+    background-color: transparent;
+    position: absolute;
+    right: 50%;
+}
+
+.chart-box{
+    width: 550px;
+    background-color:  hsl(33, 100%, 98%);
+    padding: 25px 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.chart-box .title-chart{
+    width: 100%;
+}
+
+.chart-box .title-chart h5{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.chart-box .days-chart{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    border-bottom: 1px solid hsl(27, 66%, 92%);
+    padding: 10px 0;
+}
+
+.chart-box .days-chart .day{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.chart-box .days-chart .day .show-amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(25, 47%, 15%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.chart-box .days-chart .day .show-amount > p{
+    color: hsl(33, 100%, 98%);
+    padding: 5px;
+}
+
+.chart-box .days-chart .day > p{
+    color: hsl(28, 10%, 53%);
+    margin: 10px 0 20px 0;
+}
+
+.chart-box .days-chart .day span{
+    height: 0;
+    width: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+.chart-box .price-chart{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0;
+}
+
+.chart-box .price-chart .total-box p{
+    color: hsl(28, 10%, 53%);
+}
+.chart-box .price-chart .total-box h3{
+    color: hsl(25, 47%, 15%);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 5px 0 0 5px;
+}
+
+.chart-box .price-chart .profit-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.chart-box .price-chart .profit-box p{
+    color: hsl(28, 10%, 53%);
+    margin: 5px 0 0 5px;
+}
+
+.chart-box .price-chart .profit-box  h6{
+    color: hsl(25, 47%, 15%);
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .balance-box{
+        width: 400px;
+    }
+    .chart-box{
+        width: 400px;
+        padding: 15px;
+    }
+    .chart-box .days-chart .day span{
+        width: 40px;
+    }
+    .chart-box .title-chart{
+        padding: 0 10px;
+    }
+    .chart-box .days-chart{
+        justify-content: center;
+    }
+    .chart-box .days-chart .day .show-amount > p{
+        padding: 5px 0;
+    }
+}
