@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Libre_Franklin;
+    src: url('../font/Libre_Franklin/LibreFranklin-Regular.ttf');
+}
+
+@font-face {
+    font-family: Libre_Franklin_Bold;
+    src: url('../font/Libre_Franklin/LibreFranklin-Bold.ttf');
+}
+
+body{
+    width: 100%;
+    padding: 30px;
+}
+
+.container{
+    display: flex;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+}
+
+.main .title{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.main .title p:first-child{
+    text-align: center;
+    font-family: Libre_Franklin;
+    font-size: 40px;
+    color: hsl(0, 0%, 59%);
+    font-weight: 400;
+}
+
+.main .title p:first-child span{
+    font-weight: 700;
+    color: hsl(209, 33%, 12%);
+    font-family: Libre_Franklin_Bold;
+}
+
+.main .title p:last-child{
+    text-align: center;
+    font-family: Libre_Franklin;
+    color: hsl(209, 33%, 12%);
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.main .form{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.main .form .form-control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+}
+
+.main .form .form-control .email{
+    margin: 0 10px;
+    width: 100%;
+    outline: none;
+    border: 2px solid hsl(223, 100%, 88%);
+    padding: 13px 25px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    color: hsl(0, 0%, 59%);
+    font-family: Libre_Franklin;
+}
+
+::placeholder{
+    color: hsl(0, 0%, 59%);
+}
+
+.main .form .form-control span{
+    color: hsl(354, 100%, 66%);
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: Libre_Franklin;
+    font-weight: 600;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.main .form .form-control.err span{
+    visibility: visible;
+    opacity: 1;
+}
+
+.main .form .form-control.err .email{
+    border: 2px solid hsl(354, 100%, 66%);
+}
+
+.main .form .confirm-btn{
+    margin: 0 10px;
+    width: 150px;
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: hsl(223, 87%, 63%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    font-family: Libre_Franklin;
+    box-shadow: 1px 1px 5px hsl(223, 87%, 63%);
+}
+
+.main > img{
+    margin-top: 70px;
+    width: 550px;
+}
+
+.main .social-media{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+
+.main .social-media ion-icon{
+    margin: 0 10px;
+    font-size: 20px;
+    color: hsl(223, 87%, 63%);
+    cursor: pointer;
+}
+
+.main > p{
+    color: hsl(0, 0%, 59%);
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+
+    body{
+        padding: 30px 35px;
+    }
+    
+    .logo{
+        margin-top: 70px;
+    }
+    
+    .logo img{
+        width: 70px;
+    }
+
+    .main .title p:first-child{
+        font-size: 30px;
+    }
+
+    .main .title p:last-child{
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .main .form{
+        flex-direction: column;
+    }
+
+    .main .form .form-control{
+        width: 100%;
+        margin: 0;
+    }
+
+    .main .form .form-control span{
+        font-size: 13px;
+        margin-top: 3px;
+    }
+
+    .main .form .confirm-btn{
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .main img{
+        width: 100%;
+    }
+
+    .main .social-media{
+        margin-top: 200px;
+    }
+
+    .main .social-media ion-icon{
+        font-size: 22px;
+        margin: 0 15px;
+    }
+
+    .main > p{
+        margin-top: 30px;
+    }
+
+}
