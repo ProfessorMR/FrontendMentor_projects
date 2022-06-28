@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url('../font/Manrope/Manrope-Regular.ttf');
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(218, 23%, 16%);
+}
+
+.card{
+    max-width: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 35px;
+    position: relative;
+}
+
+.card p{
+    color: hsl(150, 100%, 66%);
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: Manrope;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card h3{
+    margin-top: 20px;
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    color:  hsl(193, 38%, 86%);
+    font-weight: 800;
+}
+
+.card .pattern{
+    background-image: url('../images/pattern-divider-desktop.svg');
+    width: 100%;
+    height: 12px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px 0;
+}
+
+.card .dice{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card .dice img{
+    width: 20px;
+}
+
+@media (max-width: 600px) {
+    body{
+        padding: 0 10px;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
+
+    .card h3{
+        font-size: 34px;
+    }
+
+    .card .pattern{
+        background-image: url('../images/pattern-divider-mobile.svg');
+        height: 18px;
+    }
+
+    .card .dice{
+        width: 60px;
+        height: 60px;
+    }
+
+    .card .dice img{
+        width: 25px;
+    }
+}
