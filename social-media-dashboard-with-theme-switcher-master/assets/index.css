@@ -24,11 +24,12 @@
 }
 
 body{
-    --background-color: hsl(0, 0%, 100%);
-    --background-color-alt: hsl(225, 100%, 98%);
-    --background-color-card: hsl(227, 47%, 96%);
-    --trim-color: hsl(228, 12%, 44%);
-    --text-color: hsl(230, 17%, 14%);
+
+    --background-color: var(--dark-background-color);
+    --background-color-alt: var(--dark-background-color-alt);
+    --background-color-card: var(--dark-background-color-card);
+    --trim-color: var(--dark-trim-color);
+    --text-color: var(--dark-text-color);
     width: 100%;
     height: auto;
     background-color: var(--background-color);
@@ -36,11 +37,11 @@ body{
 }
 
 body.theme-dark{
-    --background-color: var(--dark-background-color);
-    --background-color-alt: var(--dark-background-color-alt);
-    --background-color-card: var(--dark-background-color-card);
-    --trim-color: var(--dark-trim-color);
-    --text-color: var(--dark-text-color);
+    --background-color: hsl(0, 0%, 100%);
+    --background-color-alt: hsl(225, 100%, 98%);
+    --background-color-card: hsl(227, 47%, 96%);
+    --trim-color: hsl(228, 12%, 44%);
+    --text-color: hsl(230, 17%, 14%);
 }
 
 .container{
@@ -74,7 +75,7 @@ header{
 .main-header .main-btn .toggle-btn{
     width: 60px;
     height: 30px;
-    background-color: hsl(230, 22%, 74%);
+    background-image: linear-gradient(to right,hsl(210, 78%, 56%) ,hsl(146, 68%, 55%));
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -95,10 +96,9 @@ header{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    background-color: var(--background-color);
+    background-color: var(--dark-background-color-card);
     position: absolute;
-    right: 2px;
-    left: auto;
+    left: 2px;
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -107,12 +107,13 @@ header{
 }
 
 .main-header .main-btn .toggle-btn.active-btn {
-    background-image: linear-gradient(to right,hsl(210, 78%, 56%) ,hsl(146, 68%, 55%));
+    background-color: hsl(230, 22%, 74%);
+    background-image: none;
 }
 
 .main-header .main-btn .toggle-btn.active-btn span{
-    background-color: var(--dark-background-color-card);
-    right: 58%;
+    background-color: var(--background-color);
+    left: 58%;
 }
 
 .main-header .main-btn p{
