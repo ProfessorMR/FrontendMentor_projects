@@ -24,7 +24,6 @@
 }
 
 body{
-
     --background-color: var(--dark-background-color);
     --background-color-alt: var(--dark-background-color-alt);
     --background-color-card: var(--dark-background-color-card);
