@@ -3,5 +3,5 @@ const body = document.querySelector('body');
 
 toggleBtn.addEventListener('click', () =>{
     toggleBtn.classList.toggle('active-btn');
-    body.classList.toggle('theme-dark');
+    body.classList.toggle('theme-light');
 });
