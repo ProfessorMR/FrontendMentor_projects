@@ -32,7 +32,7 @@ const checkValidations = () => {
     if(emailValue == ""){
         sendErr(email, 'Input email cannot be empty');
     }
-    else if(!(isEmail)){
+    else if(!(isEmail(emailValue))){
         sendErr(email,'Please enter the correct email')
     }
     else{
