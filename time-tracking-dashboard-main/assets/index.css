@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: Rubik;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url('../font/Rubik/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: Rubik_light;
+    src: url('../font/Rubik/Rubik-Light.ttf');
+}
+
+@font-face {
+    font-family: Rubik_Bold;
+    src: url('../font/Rubik/Rubik-Bold.ttf');
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.container{
+    height: 100%;
+    margin: auto;
+    padding: 0 40px;
+    width: 1200px;
+}
+
+.main-content{
+    height: 100%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto 1fr;
+    gap: 0 20px;
+    margin: auto;
+}
+
+.main-content .profile-card{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+}
+
+.main-content .profile-card .profile{
+    padding: 25px;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 1;
+    height: 100%;
+}
+
+.main-content .profile-card .profile .img{
+    width: 80px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid hsl(236, 100%, 87%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .profile-card .profile .img img{
+    width: 100%;
+}
+
+.main-content .profile-card .profile .name{
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 45px;
+}
+
+.main-content .profile-card .profile .name p{
+    color: hsl(236, 100%, 87%);
+    font-size: 14px;
+    opacity: .9;
+}
+
+.main-content .profile-card .profile .name h2{
+    color: hsl(236, 100%, 87%);
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.main-content .profile-card .timeline{
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    -webkit-border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 0 15px 15px;
+    -ms-border-radius: 0 0 15px 15px;
+    -o-border-radius: 0 0 15px 15px;
+    background-color: hsl(235, 46%, 20%);
+    margin-top: -10px;
+}
+
+.main-content .profile-card .timeline ul{
+    list-style: none;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-content .profile-card .timeline ul li{
+    margin: 5px;
+    width: 100%;
+}
+
+.main-content .profile-card .timeline ul li a{
+    display: block;
+    text-decoration: none;
+    color: hsl(235, 45%, 61%);
+}
+
+.main-content .profile-card .timeline ul li.active a{
+    color: hsl(236, 100%, 87%);
+}
+
+.main-content .card-items{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.main-content .items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.main-content .items .img-icon{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+    text-align: right;
+    z-index: 1;
+    padding: 0 10px;
+    margin-bottom: -10px;
+}
+
+.main-content .items:nth-child(1) .img-icon{
+    background-color: hsl(15, 100%, 70%);
+}
+
+.main-content .items:nth-child(2) .img-icon{
+    background-color: hsl(195, 74%, 62%);
+}
+
+.main-content .items:nth-child(3) .img-icon{
+    background-color: hsl(348, 100%, 68%);
+}
+
+.main-content .items:nth-child(4) .img-icon{
+    background-color: hsl(145, 58%, 55%);
+}
+
+.main-content .items:nth-child(5) .img-icon{
+    background-color: hsl(264, 64%, 52%);
+}
+
+.main-content .items:nth-child(6) .img-icon{
+    background-color: hsl(43, 84%, 65%);
+}
+
+.main-content .items .img-icon img{
+    width: 70px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.main-content .items .item{
+    padding: 20px 25px;
+    width: 100%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    z-index: 2;
+}
+
+.main-content .items .item .title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-content .items .item .title p{
+    color: hsl(236, 100%, 87%);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.main-content .items .item .title .img-item{
+    width: 20px;
+    cursor: pointer;
+}
+
+.main-content .items .item .title .img-item img{
+    width: 100%;
+}
+
+.main-content .items .item .time-doing{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.main-content .items .item .time-doing h1{
+    color: hsl(236, 100%, 87%);
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.main-content .items .item .time-doing p{
+    color: hsl(235, 45%, 61%);
+    font-size: 15px;
+}
+
+@media(max-width:992px) {
+    body{
+        padding: 80px 0;
+    }
+
+    .container{
+        width: 90%;
+    }
+    
+    .main-content{
+        grid-template-columns: 1fr;
+    }
+
+    .main-content .profile-card{
+        width: 100%;
+    }
+
+    .main-content .profile-card .profile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .main-content .profile-card .profile .name{
+        width: auto;
+    }
+
+    .main-content .profile-card .profile .name h2{
+        font-family: Rubik_light;
+    }
+
+    .main-content .profile-card .timeline ul{
+        flex-direction: row;
+    }
+
+    .main-content .profile-card .timeline ul li{
+        text-align: center;
+    }
+
+    .main-content .card-items{
+        grid-template-columns: 1fr;
+        margin: 30px 0;
+        gap: 30px 0;
+    }
+
+    .main-content .items .item .time-doing{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .main-content .items .item .time-doing p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:600px){
+    .container{
+        width: 100%;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width:475px) {
+    .main-content .profile-card .profile .name{
+        text-align: center;
+    }
+}
