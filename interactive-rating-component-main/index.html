@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/index.css">
+    
+    <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="card-wrapper">
+            <!-- Rating state start -->
+            <div class="rating-state">
+                <div class="star">
+                    <img src="images/icon-star.svg" alt="">
+                </div>
+                <div class="text-box">
+                    <h6>How did we do?</h6>
+                    <p>Please let us know how we did with your support request. All feedback is appreciated 
+                    to help us improve our offering!</p>
+                </div>
+                <div class="rating">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <button class="submit">Submit</button>
+            </div>
+            <!-- Rating state end -->
+            <!-- Thank you state start -->
+            <div class="thankyou-state">
+                <div class="banner">
+                    <img src="images/illustration-thank-you.svg" alt="">
+                </div>
+                <div class="your-rating">
+                    <p>You selected <span></span> out of 5</p>
+                </div>
+                <div class="thankyou-text">
+                    <h6>Thank you!</h6>
+                    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+                    don’t hesitate to get in touch!</p>
+                </div>
+            </div>
+            <!-- Thank you state end -->
+        </div>
+    </div>
+
+</body>
+
+<script src="assets/index.js"></script>
+
+</html>
