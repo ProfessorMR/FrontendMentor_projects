@@ -31,6 +31,10 @@ body{
     padding: 50px 0;
 }
 
+.m-content{
+    width: 100%;
+}
+
 .card-wrapper{
     width: 400px;
     display: flex;
@@ -78,11 +82,11 @@ body{
     color: hsl(0, 0%, 100%);
 }
 
-.card-wrapper .text-box h6{
+.card-wrapper .text-box .title-header{
     font-size: 1.6rem;
 }
 
-.card-wrapper .text-box p{
+.card-wrapper .text-box .paragraph{
     font-size: 1rem;
     font-weight: 400;
     font-family: Overpass_light;
@@ -98,7 +102,7 @@ body{
     margin-top: 25px;
 }
 
-.card-wrapper .rating span{
+.card-wrapper .rating .rating-item{
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -115,12 +119,12 @@ body{
     cursor: pointer;
 }
 
-.card-wrapper .rating span:hover{
+.card-wrapper .rating .rating-item:hover{
     background-color: hsl(25, 97%, 53%);
     color: hsl(0, 0%, 100%);
 }
 
-.card-wrapper .rating span.selected{
+.card-wrapper .rating .rating-item.selected{
     background-color: hsl(217, 12%, 63%);
     color: hsl(0, 0%, 100%);
 }
@@ -174,8 +178,6 @@ body{
 
 .card-wrapper .thankyou-state .your-rating{
     background-color: hsl(216, 12%, 54%,.1);
-    color: hsl(25, 97%, 53%,.9);
-    font-size: .9rem;
     margin-top: 20px;
     padding: 3px 15px;
     border-radius: 20px;  
@@ -185,18 +187,23 @@ body{
     -o-border-radius: 20px;
 }
 
+.card-wrapper .thankyou-state .your-rating .content{
+    color: hsl(25, 97%, 53%,.9);
+    font-size: .9rem;
+}
+
 .card-wrapper .thankyou-state .thankyou-text{
     width: 100%;
     text-align: center;
     margin-top: 30px;
 }
 
-.card-wrapper .thankyou-state .thankyou-text h6{
+.card-wrapper .thankyou-state .thankyou-text .title-header{
     font-size: 1.6rem;
     color: hsl(0, 0%, 100%);
 }
 
-.card-wrapper .thankyou-state .thankyou-text p{
+.card-wrapper .thankyou-state .thankyou-text .paragraph{
     font-size: .9rem;
     font-weight: 400;
     font-family: Overpass_light;
