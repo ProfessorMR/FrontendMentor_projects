@@ -93,13 +93,13 @@ body{
     padding-bottom: 45px;
 }
 
-.main-content .profile-card .profile .name p{
+.main-content .profile-card .profile .name .text{
     color: hsl(236, 100%, 87%);
     font-size: 14px;
     opacity: .9;
 }
 
-.main-content .profile-card .profile .name h2{
+.main-content .profile-card .profile .name .main-name{
     color: hsl(236, 100%, 87%);
     font-family: Rubik;
     font-weight: 400;
@@ -117,7 +117,7 @@ body{
     margin-top: -10px;
 }
 
-.main-content .profile-card .timeline ul{
+.main-content .profile-card .timeline .timing{
     list-style: none;
     padding: 25px;
     display: flex;
@@ -126,18 +126,18 @@ body{
     flex-direction: column;
 }
 
-.main-content .profile-card .timeline ul li{
+.main-content .profile-card .timeline .timing li{
     margin: 5px;
     width: 100%;
 }
 
-.main-content .profile-card .timeline ul li a{
+.main-content .profile-card .timeline .timing li a{
     display: block;
     text-decoration: none;
     color: hsl(235, 45%, 61%);
 }
 
-.main-content .profile-card .timeline ul li.active a{
+.main-content .profile-card .timeline .timing li.active a{
     color: hsl(236, 100%, 87%);
 }
 
@@ -218,7 +218,7 @@ body{
     justify-content: space-between;
 }
 
-.main-content .items .item .title p{
+.main-content .items .item .title .title-works{
     color: hsl(236, 100%, 87%);
     font-weight: 700;
     font-size: 15px;
@@ -239,13 +239,13 @@ body{
     padding: 10px 0;
 }
 
-.main-content .items .item .time-doing h1{
+.main-content .items .item .time-doing .time{
     color: hsl(236, 100%, 87%);
     font-size: 45px;
     font-weight: 400;
 }
 
-.main-content .items .item .time-doing p{
+.main-content .items .item .time-doing .time-done{
     color: hsl(235, 45%, 61%);
     font-size: 15px;
 }
@@ -279,15 +279,15 @@ body{
         width: auto;
     }
 
-    .main-content .profile-card .profile .name h2{
+    .main-content .profile-card .profile .name .main-name{
         font-family: Rubik_light;
     }
 
-    .main-content .profile-card .timeline ul{
+    .main-content .profile-card .timeline .timing{
         flex-direction: row;
     }
 
-    .main-content .profile-card .timeline ul li{
+    .main-content .profile-card .timeline .timing li{
         text-align: center;
     }
 
@@ -304,7 +304,7 @@ body{
         flex-direction: row;
     }
 
-    .main-content .items .item .time-doing p{
+    .main-content .items .item .time-doing .time-done{
         font-size: 16px;
     }
 }
