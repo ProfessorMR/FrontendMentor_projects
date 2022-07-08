@@ -108,7 +108,7 @@ header .logo .img{
     padding: 20px 100px;
 }
 
-.social-media .icon{
+.social-media .icon-container{
     width: 30px;
     height: 30px;
     display: flex;
@@ -124,7 +124,7 @@ header .logo .img{
     -o-border-radius: 50%;
 }
 
-.social-media .icon ion-icon{
+.social-media .icon-container .icon{
     font-size: 18px;
 }
 
