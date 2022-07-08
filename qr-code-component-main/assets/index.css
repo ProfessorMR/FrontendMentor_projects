@@ -50,7 +50,7 @@ body{
     overflow: hidden;
 }
 
-.main-box .barcode-box img{
+.main-box .barcode-box .img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -61,7 +61,7 @@ body{
     margin-top: 20px;
 }
 
-.main-box .subject-box h5{
+.main-box .subject-box .title{
     font-weight: 700;
     font-size: 21px;
     text-align: center;
@@ -75,7 +75,7 @@ body{
     margin-bottom: 30px;
 }
 
-.main-box .description-box p{
+.main-box .description-box .content{
     font-weight: 400;
     font-size: 15px;
     text-align: center;
