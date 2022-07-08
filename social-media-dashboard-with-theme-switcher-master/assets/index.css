@@ -55,6 +55,10 @@ header{
     padding: 30px 0;
 }
 
+.m-content{
+    width: 100%;
+}
+
 .main-header{
     width: 100%;
     display: flex;
@@ -87,7 +91,7 @@ header{
     justify-content: center;
 }
 
-.main-header .main-btn .toggle-btn span{
+.main-header .main-btn .toggle-btn .circle{
     width: 23px;
     height: 23px;
     border-radius: 50%;
@@ -110,12 +114,12 @@ header{
     background-image: none;
 }
 
-.main-header .main-btn .toggle-btn.active-btn span{
+.main-header .main-btn .toggle-btn.active-btn .circle{
     background-color: var(--background-color);
     left: 58%;
 }
 
-.main-header .main-btn p{
+.main-header .main-btn .text-dark{
     font-weight: 400;
     font-size: 14px;
     margin-right: 10px;
@@ -129,12 +133,12 @@ header{
     flex-direction: column;
 }
 
-.main-header .main-title h5{
+.main-header .main-title .title{
     font-size: 23px;
     font-family: Inter_Bold;
 }
 
-.main-header .main-title p{
+.main-header .main-title .info{
     font-size: 14px;
     color: var(--trim-color);
     font-weight: 600;
@@ -221,7 +225,7 @@ header{
     width: 20px;
 }
 
-.profile-cards .card .content .logo p{
+.profile-cards .card .content .logo .username{
     color: var(--trim-color);
     font-size: 14px;
 }
@@ -234,11 +238,11 @@ header{
     flex-direction: column;
 }
 
-.profile-cards .card .content .number-of-followers h1{
+.profile-cards .card .content .number-of-followers .number{
     font-size: 45px;
 }
 
-.profile-cards .card .content .number-of-followers p{
+.profile-cards .card .content .number-of-followers .follower-text{
     color: var(--trim-color);
     letter-spacing: 4px;
     font-size: 14px;
@@ -251,12 +255,12 @@ header{
     margin-top: 20px;
 }
 
-.profile-cards .card .content .inc-dec-followers p{
+.profile-cards .card .content .inc-dec-followers .day{
     color: hsl(163, 72%, 41%);
     font-size: 14px;
 
 }
-.profile-cards .card:last-child .content .inc-dec-followers p{
+.profile-cards .card:last-child .content .inc-dec-followers .day{
     color: hsl(356, 69%, 56%);
 }
 
@@ -283,7 +287,7 @@ header{
     padding: 20px 0;
 }
 
-.main-info-card .title-info h3{
+.main-info-card .title-info .title-today{
     width: 100%;
     text-align: left;
     font-family: Inter_Bold;
@@ -317,7 +321,7 @@ header{
     justify-content: space-between;
 }
 
-.main-info-card .card-followers .card .info-social-media p{
+.main-info-card .card-followers .card .info-social-media .info-page{
     color: var(--trim-color);
     font-size: 14px;
     font-size: 600;
@@ -335,7 +339,7 @@ header{
     margin-top: 20px;
 }
 
-.main-info-card .card-followers .card .number-of-followers h3{
+.main-info-card .card-followers .card .number-of-followers .number{
     font-size: 24px;
 }
 
@@ -349,14 +353,14 @@ header{
     margin-right: 3px;
 }
 
-.main-info-card .card-followers .card .number-of-followers .inc-dec-followers p{
+.main-info-card .card-followers .card .number-of-followers .inc-dec-followers .percent{
     color: hsl(163, 72%, 41%);
     font-size: 13px;
 }
 
-.main-info-card .card-followers .card:nth-child(2) .number-of-followers .inc-dec-followers p,
-.main-info-card .card-followers .card:nth-child(7) .number-of-followers .inc-dec-followers p,
-.main-info-card .card-followers .card:last-child .number-of-followers .inc-dec-followers p{
+.main-info-card .card-followers .card:nth-child(2) .number-of-followers .inc-dec-followers .percent,
+.main-info-card .card-followers .card:nth-child(7) .number-of-followers .inc-dec-followers .percent,
+.main-info-card .card-followers .card:last-child .number-of-followers .inc-dec-followers .percent{
     color: hsl(356, 69%, 56%);
 }
 
