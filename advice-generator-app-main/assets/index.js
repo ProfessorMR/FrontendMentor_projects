@@ -3,7 +3,7 @@ const card = document.querySelector('.card');
 const url = 'https://api.adviceslip.com/advice';
 
 let cardId = card.querySelector('p').children[0];
-let cardAdvice = card.querySelector('h3');
+let cardAdvice = card.querySelector('h1');
 
 fetch(url,{
     method: 'GET',
