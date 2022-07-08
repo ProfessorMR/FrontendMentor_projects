@@ -50,7 +50,7 @@ header .main-header{
     padding: 40px;
 }
 
-header .main-header button{
+header .main-header .try-it{
     padding: 6px 20px;
     outline: none;
     border: 1px solid hsl(321, 100%, 78%);
@@ -70,7 +70,7 @@ header .logo{
     cursor: pointer;
 }
 
-header .logo img{
+header .logo .img{
     width: 100%;
 }
 
@@ -96,14 +96,14 @@ main{
     flex-direction: column;
 }
 
-.main-section .get-start-box h6{
+.main-section .get-start-box .title{
     text-align: center;
     font-size: 40px;
     font-family: Open_Sans_Bold;
     color: hsl(192, 100%, 9%);
 }
 
-.main-section .get-start-box p{
+.main-section .get-start-box .paragraph{
     margin: 25px auto 0 auto;
     width: 400px;
     text-align: center;
@@ -137,7 +137,7 @@ main{
     margin-top: 60px;
 }
 
-.main-section .image-box img{
+.main-section .image-box .img{
     width: 100%;
 }
 
@@ -157,18 +157,18 @@ main{
     flex-direction: column;
 }
 
-.main-section .statistics-box .statistics-item img{
+.main-section .statistics-box .statistics-item .img{
     width: 30px;
 }
 
-.main-section .statistics-box .statistics-item h3{
+.main-section .statistics-box .statistics-item .title{
     font-size: 60px;
     font-family: Open_Sans_Bold;
     font-weight: 600;
     color: hsl(192, 100%, 9%);
 }
 
-.main-section .statistics-box .statistics-item p{
+.main-section .statistics-box .statistics-item .text{
     color: hsl(192, 100%, 9%);
     font-family: Open_Sans;
     font-size: 15px;
@@ -221,7 +221,7 @@ main{
     z-index: 1;
 }
 
-.main-section .information-box .item .content-item img{
+.main-section .information-box .item .content-item .img{
     width: 40%;
 }
 
@@ -229,13 +229,13 @@ main{
     width: 35%;
 }
 
-.main-section .information-box .item .content-item .des-item h6{
+.main-section .information-box .item .content-item .des-item .sub{
     font-size: 30px;
     font-family: Open_Sans_Bold;
     color: hsl(192, 100%, 9%);
 }
 
-.main-section .information-box .item .content-item .des-item p{
+.main-section .information-box .item .content-item .des-item .paragraph{
     font-size: 17px;
     margin-top: 20px;
     color: hsl(192, 100%, 9%);
@@ -276,7 +276,7 @@ main{
     justify-content: center;
 }
 
-.main-section .start-free-box h6{
+.main-section .start-free-box .title{
     font-size: 40px;
     color: hsl(192, 100%, 9%);
     font-family: Open_Sans_Bold;
@@ -348,11 +348,11 @@ footer{
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(256deg) brightness(104%) contrast(102%);
 }
 
-.footer-main .contactus-box .logo img{
+.footer-main .contactus-box .logo .img-logo{
     width: 100%;
 }
 
-.footer-main .contactus-box p{
+.footer-main .contactus-box .paragraph{
     font-family: Open_Sans;
     font-size: 16px;
     margin-top: 20px;
@@ -376,12 +376,12 @@ footer{
     margin: 6px 0;
 }
 
-.footer-main .contactus-box .ways-of-communication-box .way-item img{
+.footer-main .contactus-box .ways-of-communication-box .way-item .img{
     width: 5%;
     margin-right: 15px;
 }
 
-.footer-main .contactus-box .ways-of-communication-box .way-item h6{
+.footer-main .contactus-box .ways-of-communication-box .way-item .info{
     color: hsl(207, 100%, 98%);
     font-size: 16px;
     font-family: Open_Sans;
@@ -397,7 +397,7 @@ footer{
     flex-direction: row;
 }
 
-.footer-main .contactus-box .social-media ion-icon{
+.footer-main .contactus-box .social-media .icon{
     margin: 0 7px;
     font-size: 30px;
     color: hsl(207, 100%, 98%);
@@ -408,13 +408,13 @@ footer{
     width: 45%;
 }
 
-.footer-main .send-feedback h3{
+.footer-main .send-feedback .head{
     font-family: Open_Sans;
     font-size: 25px;
     color: hsl(207, 100%, 98%);
 }
 
-.footer-main .send-feedback p{
+.footer-main .send-feedback .paragraph{
     font-family: Open_Sans;
     margin-top: 20px;
     color: hsl(207, 100%, 98%);
@@ -422,18 +422,35 @@ footer{
     width: 400px;
 }
 
-.footer-main .send-feedback .form-control{
+.footer-main .send-feedback .form{
     margin-top: 40px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.footer-main .send-feedback .form-control .inp{
+.footer-main .send-feedback .form .form-control{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.footer-main .send-feedback .form .label{
+    width: 100%;
+    margin-bottom: 10px;
+    color: hsl(207, 100%, 98%);
+    font-family: Open_Sans;
+    font-size: 15px;
+}
+
+.footer-main .send-feedback .form .form-control .inp{
     outline: none;
     border: none;
     padding: 0 10px;
     color: hsl(192, 100%, 9%);
-    width: 62%;
+    width: 500px;
     height: 35px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -442,7 +459,7 @@ footer{
     -o-border-radius: 5px;
 }
 
-.footer-main .send-feedback .form-control .btn{
+.footer-main .send-feedback .form .btn{
     outline: none;
     border: none;
     padding: 10px 25px;
@@ -457,6 +474,7 @@ footer{
     margin-left: 25px;
     font-family: Opane_Sans;
     font-weight: 600;
+    width: 150px;
 }
 
 @media (max-width: 992px){
@@ -468,11 +486,11 @@ footer{
         padding: 0 50px;
     }
 
-    .main-section .get-start-box h6{
+    .main-section .get-start-box .title{
         font-size: 30px;
     }
 
-    .main-section .get-start-box p{
+    .main-section .get-start-box .paragraph{
         width: 50%;
     }
 
@@ -481,7 +499,6 @@ footer{
         margin-top: 100px;
     }
     
-
     .main-section .statistics-box{
         flex-direction: column;
     }
@@ -500,11 +517,11 @@ footer{
         margin-top: 100px;
     }
 
-    .main-section .statistics-box .statistics-item img{
+    .main-section .statistics-box .statistics-item .img{
         margin-right: 130px;
     }
 
-    .main-section .statistics-box .statistics-item h3{
+    .main-section .statistics-box .statistics-item .title{
         font-size: 70px;
     }
 
@@ -516,7 +533,7 @@ footer{
         flex-direction: column-reverse;
     }
 
-    .main-section .information-box .item .content-item img{
+    .main-section .information-box .item .content-item .img{
         width: 100%;
     }
 
@@ -535,15 +552,15 @@ footer{
         url('../images/bg-section-bottom-mobile-2.svg');
     }
 
-    .main-section .information-box .item .content-item .des-item h6{
+    .main-section .information-box .item .content-item .des-item .sub{
         text-align: center;
     }
 
-    .main-section .information-box .item .content-item .des-item p{
+    .main-section .information-box .item .content-item .des-item .paragraph{
         text-align: center;
     }
 
-    .main-section .start-free-box h6{
+    .main-section .start-free-box .title{
         font-size: 30px;
         text-align: center;
     }
@@ -569,7 +586,7 @@ footer{
         width: 200px;
     }
 
-    .footer-main .contactus-box p{
+    .footer-main .contactus-box .paragraph{
         width: 100%;
     }
     
@@ -577,25 +594,27 @@ footer{
         width: 100%;
     }
     
-    .footer-main .send-feedback h3{
+    .footer-main .send-feedback .head{
         font-size: 30px;
     }
 
-    .footer-main .send-feedback p{
+    .footer-main .send-feedback .paragraph{
         width: 100%;
     }
 
-    .footer-main .send-feedback .form-control{
-        justify-content: flex-end;
-        align-items: center;
+    .footer-main .send-feedback .form .form-control{
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .footer-main .send-feedback .form-control .inp{
+    .footer-main .send-feedback .form .form-control .inp{
         width: 100%;
         height: 50px;
     }
 
-    .footer-main .send-feedback .form-control .btn{
+    .footer-main .send-feedback .form .form-control .btn{
         margin: 20px 0 0 0;
         width: 50%;
         padding: 15px 25px;
@@ -603,7 +622,7 @@ footer{
 }
 
 @media (max-width: 600px){
-    .main-section .get-start-box p{
+    .main-section .get-start-box .paragraph{
         width: 100%;
     }
 
@@ -611,11 +630,11 @@ footer{
         padding: 12px 60px;
     }
 
-    .main-section .information-box .item .content-item .des-item h6{
+    .main-section .information-box .item .content-item .des-item .sub{
         font-size: 27px;
     }
 
-    .main-section .information-box .item .content-item .des-item p{
+    .main-section .information-box .item .content-item .des-item .paragraph{
         font-size: 16px;
     }
 }
