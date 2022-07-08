@@ -50,14 +50,14 @@ body{
     padding: 0 0 0 70px;
 }
 
-.main-content .info h1{
+.main-content .info .title{
     color: hsl(0, 0%, 100%);
     font-size: 45px;
     text-align: left;
     line-height: 50px;
 }
 
-.main-content .info p{
+.main-content .info .paragraph{
     margin-top: 40px;
     font-size: 16px;
     color: hsl(0, 0%, 100%);
@@ -89,12 +89,12 @@ body{
     -o-border-radius: 5px;
 }
 
-.main-content .sign-up .buy-it span{
+.main-content .sign-up .buy-it .text-free{
     font-weight: 700;
     font-family: Poppins_Bold;
 }
 
-.main-content .sign-up form{
+.main-content .sign-up .form{
     width: 80%;
     margin: 15px auto;
     background-color: hsl(0, 0%, 100%);
@@ -107,14 +107,14 @@ body{
     box-shadow: 0 10px 4px rgb(0 0 0 / 10%);
 }
 
-.main-content .sign-up form .form-control{
+.main-content .sign-up .form .form-control{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
 }
 
-.main-content .sign-up form .form-control::before {
+.main-content .sign-up .form .form-control::before {
     content: '';
     position: absolute;
     right: 10px;
@@ -134,7 +134,7 @@ body{
     -o-transform: translate(50%, 50%);
 }
 
-.main-content .sign-up form .form-control input{
+.main-content .sign-up .form .form-control .inp{
     width: 100%;
     padding: 15px 20px;
     outline: none;
@@ -151,7 +151,7 @@ body{
     font-weight: 600;
 }
 
-.main-content .sign-up form .form-control span{
+.main-content .sign-up .form .form-control .err-msg{
     width: 100%;
     margin: 5px 0;
     font-size: 13px;
@@ -163,22 +163,22 @@ body{
     opacity: 0;
 }
 
-.main-content .sign-up form .form-control.err::before{
+.main-content .sign-up .form .form-control.err::before{
     opacity: 1;
     visibility: visible;
 }
 
-.main-content .sign-up form .form-control.err span{
+.main-content .sign-up .form .form-control.err .err-msg{
     visibility: visible;
     opacity: 1;
 }
 
-.main-content .sign-up form .form-control.err input{
+.main-content .sign-up .form .form-control.err .inp{
     border: 1px solid hsl(0, 100%, 74%);
 }
 
 
-.main-content .sign-up form .sign-up-btn{
+.main-content .sign-up .form .sign-up-btn{
     outline: none;
     border: none;
     width: 100%;
@@ -202,14 +202,14 @@ body{
     box-shadow: inset 0px -4px 0px rgb(0 0 0 / 9%);
 }
 
-.main-content .sign-up form > p{
+.main-content .sign-up .form .click-text{
     width: 80%;
     color: hsl(246, 25%, 77%);
     font-size: 10px;
     margin: 10px auto;
 }
 
-.main-content .sign-up form > p > a{
+.main-content .sign-up .form .click-text  a{
     text-decoration: none;
     color: hsl(0, 100%, 74%);
     font-family: Poppins_Bold;
@@ -236,12 +236,12 @@ body{
         width: 100%;
     }
 
-    .main-content .info h1{
+    .main-content .info .title{
         font-size: 30px;
         text-align: center;
     }
     
-    .main-content .info p{
+    .main-content .info .paragraph{
         text-align: center;
         margin-top: 20px;
         font-size: 15px;
@@ -257,19 +257,19 @@ body{
         padding: 15px 50px;
     }
 
-    .main-content .sign-up form{
+    .main-content .sign-up .form{
         width: 100%;
         margin-top: 25px;
     }
 
-    .main-content .sign-up form .sign-up-btn{
+    .main-content .sign-up .form .sign-up-btn{
         height: 55px;
         font-size: 14px;
         letter-spacing: 2px;
         font-weight: 550;
     }
 
-    .main-content .sign-up form > p{
+    .main-content .sign-up .form .click-text{
         width: 100%;
         text-align: center;
     }
