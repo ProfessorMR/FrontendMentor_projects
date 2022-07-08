@@ -116,15 +116,16 @@ header .logo .img{
     justify-content: center;
     color: #fff;
     border: 1px solid #fff;
-    margin-right: 5px;
+    margin-right: 10px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    cursor: pointer;
 }
 
-.social-media .icon-container .icon{
+.social-media .icon-container svg{
     font-size: 18px;
 }
 
