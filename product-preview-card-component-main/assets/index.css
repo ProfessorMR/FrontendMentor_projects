@@ -64,7 +64,7 @@ body{
     height: 100%;
 }
 
-.main-item .content-item > h6{
+.main-item .content-item .text{
     font-family: Montserrat;
     letter-spacing: 3px;
     font-size: 14px;
@@ -72,14 +72,14 @@ body{
     font-weight: 600;
 }
 
-.main-item .content-item h1{
+.main-item .content-item .title{
     margin-top: 15px;
     font-size: 35px;
     line-height: 35px;
     color: hsl(212, 21%, 14%);
 }
 
-.main-item .content-item p{
+.main-item .content-item .info{
     margin-top: 15px;
     font-size: 14px;
     font-family: Montserrat;
@@ -93,20 +93,20 @@ body{
 
 }
 
-.main-item .content-item .prices h3{
+.main-item .content-item .prices .price-with-discount{
     font-family: Fraunces;
     color: hsl(158, 36%, 37%);
     font-size: 28px;
 }
 
-.main-item .content-item .prices del{
+.main-item .content-item .prices .price-without-discount{
     margin-left: 20px;
     color: hsl(228, 12%, 48%);
     font-size: 14px;
     font-family: Montserrat;
 }
 
-.main-item .content-item button{
+.main-item .content-item .add-to-cart{
     margin-top: 20px;
     width: 100%;
     text-align: center;
@@ -128,7 +128,7 @@ body{
     justify-content: center;
 }
 
-.main-item .content-item button img{
+.main-item .content-item .add-to-cart .img{
     margin-right: 10px;
 }
 
@@ -158,5 +158,10 @@ body{
     .main-item .content-item{
         width: 100%;
     }
+}
 
+@media (max-width: 450px){
+    .main-item{
+        width: 100%;
+    }
 }
