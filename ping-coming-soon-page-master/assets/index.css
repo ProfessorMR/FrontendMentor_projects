@@ -19,7 +19,8 @@ body{
     padding: 30px;
 }
 
-.container{
+.header{
+    width: 100%;
     display: flex;
     margin: 0 auto;
 }
