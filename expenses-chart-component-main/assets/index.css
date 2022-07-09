@@ -18,7 +18,7 @@ body{
 
 .container{
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -29,7 +29,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .balance-box{
@@ -50,12 +50,12 @@ body{
     color: hsl(33, 100%, 98%);
 }
 
-.balance-box .price-box p{
+.balance-box .price-box .text{
     font-weight: 400;
     font-size: .9rem;
 }
 
-.balance-box .price-box h6{
+.balance-box .price-box .price{
     font-weight: 700;
     font-size: 1.4rem;
     margin: 5px 0 0 5px;
@@ -67,7 +67,7 @@ body{
     position: relative;
 }
 
-.balance-box .cirlce-box span{
+.balance-box .cirlce-box .circle{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -79,7 +79,7 @@ body{
     border: 2px solid hsl(25, 47%, 15%);
 }
 
-.balance-box .cirlce-box span:last-child{
+.balance-box .cirlce-box .circle:last-child{
     border: 2px solid hsl(33, 100%, 98%);
     background-color: transparent;
     position: absolute;
@@ -106,7 +106,7 @@ body{
     width: 100%;
 }
 
-.chart-box .title-chart h5{
+.chart-box .title-chart .title{
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -141,19 +141,20 @@ body{
     margin-bottom: 10px;
     visibility: hidden;
     opacity: 0;
+    width: 100%;
 }
 
-.chart-box .days-chart .day .show-amount > p{
+.chart-box .days-chart .day .show-amount .price{
     color: hsl(33, 100%, 98%);
     padding: 5px;
 }
 
-.chart-box .days-chart .day > p{
+.chart-box .days-chart .day .week-day{
     color: hsl(28, 10%, 53%);
     margin: 10px 0 20px 0;
 }
 
-.chart-box .days-chart .day span{
+.chart-box .days-chart .day .chart{
     height: 0;
     width: 50px;
     border-radius: 5px;
@@ -172,10 +173,10 @@ body{
     padding: 20px 0;
 }
 
-.chart-box .price-chart .total-box p{
+.chart-box .price-chart .total-box .text{
     color: hsl(28, 10%, 53%);
 }
-.chart-box .price-chart .total-box h3{
+.chart-box .price-chart .total-box .price{
     color: hsl(25, 47%, 15%);
     font-size: 1.9rem;
     font-weight: 700;
@@ -189,17 +190,20 @@ body{
     align-items: flex-end;
 }
 
-.chart-box .price-chart .profit-box p{
+.chart-box .price-chart .profit-box .text{
     color: hsl(28, 10%, 53%);
     margin: 5px 0 0 5px;
 }
 
-.chart-box .price-chart .profit-box  h6{
+.chart-box .price-chart .profit-box .percent{
     color: hsl(25, 47%, 15%);
     font-size: 16px;
 }
 
 @media (max-width: 600px) {
+    .container{
+        padding: 40px 15px;
+    }
     .balance-box{
         width: 400px;
     }
@@ -207,7 +211,7 @@ body{
         width: 400px;
         padding: 15px;
     }
-    .chart-box .days-chart .day span{
+    .chart-box .days-chart .day .chart{
         width: 40px;
     }
     .chart-box .title-chart{
@@ -216,7 +220,25 @@ body{
     .chart-box .days-chart{
         justify-content: center;
     }
-    .chart-box .days-chart .day .show-amount > p{
+    .chart-box .days-chart .day .show-amount .price{
         padding: 5px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .balance-box{
+        width: 100%;
+    }
+
+    .chart-box{
+        width: 100%;
+    }
+
+    .chart-box .days-chart .day .chart{
+        width: 30px;
+    }
+
+    .chart-box .days-chart .day .show-amount .price{
+        font-size: 11px;
     }
 }
