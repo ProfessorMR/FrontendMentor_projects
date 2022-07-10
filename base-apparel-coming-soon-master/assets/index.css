@@ -135,7 +135,7 @@ body{
     color: hsl(0, 36%, 70%);
 }
 
-.information .form .form-control .label .err-img{
+.information .form .form-control .err-img{
     position: absolute;
     right: 90px;
     top: 19%;
@@ -144,7 +144,7 @@ body{
     opacity: 0;
 }
 
-.information .form .form-control.err .label .err-img{
+.information .form .form-control.err .err-img{
     opacity: 1;
     visibility: visible;
 }
@@ -164,7 +164,7 @@ body{
     visibility: visible;
 }
 
-.information .form .form-control .label .confirm{
+.information .form .form-control .confirm{
     position: absolute;
     right: 0px;
     top: 0;
@@ -182,13 +182,13 @@ body{
     -o-border-radius: 25px;
 }
 
-.information .form .form-control .label .confirm .img{
+.information .form .form-control .confirm .img{
     width: 12px;
 }
 
 @media (min-width: 1400px) {
     .hero-img{
-        width: 100%;
+        width: 90%;
     }
 
     .information{
@@ -264,12 +264,12 @@ body{
         font-size: 13px;
     }
 
-    .information .form .form-control .label .confirm{
+    .information .form .form-control .confirm{
         height: 45px;
         width: 70px;
     }
 
-    .information .form .form-control .label .err-img{
+    .information .form .form-control .err-img{
         top: 15%;
         width: 22px;
     }
