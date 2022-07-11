@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Karla;
+    src: url('../font/Karla/Karla-Regular.ttf');
+}
+
+@font-face {
+    font-family: Karla_Bold;
+    src: url('../font/Karla/Karla-Bold.ttf');
+}
+
+body{
+    width: 100%;
+    background-color: hsl(204, 43%, 93%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Karla;
+}
+
+.m-content{
+    width: 100%;
+    padding: 25px;
+}
+
+.content{
+    margin: auto;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px hsl(0, 0%, 0% , .2);
+}
+
+.content .info{
+    width: 100%;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    padding: 35px;
+    padding-right: 55px;
+}
+
+.content .info .title{
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+    font-family: Karla_Bold;
+    font-size: 25px;
+}
+
+.content .info .text{
+    font-size: 20px;
+    color: hsl(71, 73%, 54%);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.content .info .paragraph{
+    font-size: 15px;
+    margin-top: 10px;
+    color:hsl(218, 22%, 67%);
+}
+
+.content .buy-box{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.content .buy-box .subscription{
+    width: 50%;
+    padding: 35px;
+    background-color: hsl(179, 62%, 43%);
+    border-radius: 0 0 0 5px;
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    -ms-border-radius: 0 0 0 5px;
+    -o-border-radius: 0 0 0 5px;
+}
+
+.content .buy-box .subscription .title{
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+}
+
+.content .buy-box .subscription .price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.content .buy-box .subscription .price .title-price{
+    font-size: 27px;
+    color: hsl(0, 0%, 100%);
+}
+
+.content .buy-box .subscription .price .text{
+    margin-left: 10px;
+    color: hsl(204, 43%, 93%);
+    font-size: 15px;
+}
+
+.content .buy-box .subscription .desc{
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.content .buy-box .subscription .btn{
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(71, 73%, 54%);
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px hsl(0, 0%, 0% , .4);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.content .buy-box .why-us{
+    width: 50%;
+    padding: 35px;
+    padding-right: 55px;
+    background-color: hsl(179, 62%, 43%,.8);
+    border-radius: 0 0 5px 0;
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    -ms-border-radius: 0 0 5px 0;
+    -o-border-radius: 0 0 5px 0;
+}
+
+.content .buy-box .why-us .title{
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+}
+
+.content .buy-box .why-us .paragraph{
+    color: hsl(204, 43%, 93%);
+    margin-top: 23px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .content{
+        width: 550px;
+    }
+    .m-content{
+        padding: 25px 30px;
+    }
+
+    .content .buy-box .why-us .paragraph{
+        margin-top: 22px;
+    }
+}
+
+@media (max-width: 600px){
+    .content{
+        width: 100%;
+    }
+
+    .content .buy-box{
+        flex-direction: column;
+    }
+
+    .content .buy-box .subscription{
+        width: 100%;
+    }
+
+    .content .buy-box .subscription .title{
+        font-size: 20px;
+    }
+    
+    .content .buy-box .subscription .price .title-price{
+        font-size: 30px;
+    }
+
+    .content .buy-box .subscription .price .text{
+        font-size: 18px;
+    }
+
+    .content .buy-box .subscription .desc{
+        font-size: 15px;
+    }
+
+    .content .buy-box .subscription .btn{
+        height: 45px;
+    }
+
+    .content .buy-box .why-us{
+        width: 100%;
+    }
+
+    .content .buy-box .subscription{
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+
+    .content .buy-box .why-us .title{
+        font-size: 20px;
+    }
+
+    .content .buy-box .why-us .paragraph{
+        font-size: 16px;
+    }
+}
