@@ -1,6 +1,6 @@
 # Frontend Mentor - Intro component with sign up form
 
-This is a solution to intro component with sign up form challenge on frontend mentor
+This is a solution to the intro component with sign up form challenge on frontend mentor
 
 ## Screenshot
 
