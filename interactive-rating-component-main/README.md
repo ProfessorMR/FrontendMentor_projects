@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive rating component
 
-This is a solution to interactive rating component challenge on frontend mentor
+This is a solution to the interactive rating component challenge on frontend mentor
 
 ## Screenshot
 
