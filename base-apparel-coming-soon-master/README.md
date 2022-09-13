@@ -11,7 +11,6 @@ This is a solution to the base apparel coming soon page challenge on frontend me
 - Html 5
 - Flexbox
 - Css grid
-- Css animation
 - Media query
 - Javascript
 
