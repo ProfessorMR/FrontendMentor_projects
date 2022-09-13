@@ -10,7 +10,6 @@ This is a solution to the advice generator app challenge on frontend mentor
 
 - Html 5
 - Flexbox
-- Css animation
 - Media query
 - Javascript
 - Api
