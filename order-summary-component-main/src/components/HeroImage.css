@@ -1,0 +1,13 @@
+.heroImage {
+  width: 100%;
+  display: flex;
+}
+
+.heroImage img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  -webkit-border-radius: 1rem 1rem 0 0;
+  -moz-border-radius: 1rem 1rem 0 0;
+  -ms-border-radius: 1rem 1rem 0 0;
+  -o-border-radius: 1rem 1rem 0 0;
+}

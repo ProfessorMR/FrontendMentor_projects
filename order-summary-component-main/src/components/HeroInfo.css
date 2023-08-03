@@ -1,0 +1,30 @@
+.heroInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.5rem 3rem;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-border-radius: 0 0 1rem 1rem;
+  -moz-border-radius: 0 0 1rem 1rem;
+  -ms-border-radius: 0 0 1rem 1rem;
+  -o-border-radius: 0 0 1rem 1rem;
+}
+
+.heroInfo h1 {
+  font-family: "Red Hat 900";
+  font-size: 1.9rem;
+}
+
+.heroInfo p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+}
+
+.planBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

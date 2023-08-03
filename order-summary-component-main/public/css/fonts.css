@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Red Hat 500";
+  src: url("../fonts/RedHatDisplay-Medium.eot");
+  src: url("../fonts/RedHatDisplay-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/RedHatDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/RedHatDisplay-Medium.woff") format("woff"),
+    url("../fonts/RedHatDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat 700";
+  src: url("../fonts/RedHatDisplay-Bold.eot");
+  src: url("../fonts/RedHatDisplay-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/RedHatDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/RedHatDisplay-Bold.woff") format("woff"),
+    url("../fonts/RedHatDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat 900";
+  src: url("../fonts/RedHatDisplay-ExtraBold.eot");
+  src: url("../fonts/RedHatDisplay-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/RedHatDisplay-ExtraBold.woff2") format("woff2"),
+    url("../fonts/RedHatDisplay-ExtraBold.woff") format("woff"),
+    url("../fonts/RedHatDisplay-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
