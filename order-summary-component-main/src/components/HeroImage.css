@@ -5,9 +5,9 @@
 
 .heroImage img {
   width: 100%;
-  border-radius: 1rem 1rem 0 0;
-  -webkit-border-radius: 1rem 1rem 0 0;
-  -moz-border-radius: 1rem 1rem 0 0;
-  -ms-border-radius: 1rem 1rem 0 0;
-  -o-border-radius: 1rem 1rem 0 0;
+  border-radius: 1.3rem 1.3rem 0 0;
+  -webkit-border-radius: 1.3rem 1.3rem 0 0;
+  -moz-border-radius: 1.3rem 1.3rem 0 0;
+  -ms-border-radius: 1.3rem 1.3rem 0 0;
+  -o-border-radius: 1.3rem 1.3rem 0 0;
 }

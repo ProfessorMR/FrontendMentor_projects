@@ -1,30 +1,23 @@
-import { DESATURATED_BLUE, VERY_PALE_BLUE } from "../helpers/Colors";
-import iconMusic from "../assets/images/icon-music.svg";
+import { BRIGHT_BLUE, DARK_BLUE, DESATURATED_BLUE } from "../helpers/Colors";
+import PanelBox from "./PanelBox";
 
 import "./HeroInfo.css";
 
 const HeroInfo = () => {
   return (
-    <div className="heroInfo" style={{ backgroundColor: VERY_PALE_BLUE }}>
-      <h1>Order Summary</h1>
-      <p style={{ color: DESATURATED_BLUE }}>
+    <div className="heroInfo">
+      <h1 style={{ color: DARK_BLUE }}>Order Summary</h1>
+      <p className="desc" style={{ color: DESATURATED_BLUE }}>
         {" "}
         You can now listen to millions of songs, audiobooks, and podcasts on any
         device anywhere you like!
       </p>
-      <div className="planBox">
-        <div className="panelName">
-          <img src={iconMusic} alt="iconImage" />
-          <div className="info">
-            <h4>Annual Plan</h4>
-            <span>$59.99/year</span>
-          </div>
-        </div>
-        <p> Change</p>
-      </div>
+      <PanelBox />
       <div className="btnBoxes">
-        <button className="paymentBtn">Proceed to Payment</button>
-        <button className="cancelBtn"> Cancel Order</button>
+        <button className="paymentBtn" style={{ backgroundColor: BRIGHT_BLUE }}>
+          Proceed to Payment
+        </button>
+        <span style={{ color: DESATURATED_BLUE }}>Cancel Order</span>
       </div>
     </div>
   );

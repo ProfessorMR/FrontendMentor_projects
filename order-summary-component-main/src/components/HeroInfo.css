@@ -3,28 +3,86 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2.5rem 3rem;
-  border-radius: 0 0 1rem 1rem;
-  -webkit-border-radius: 0 0 1rem 1rem;
-  -moz-border-radius: 0 0 1rem 1rem;
-  -ms-border-radius: 0 0 1rem 1rem;
-  -o-border-radius: 0 0 1rem 1rem;
+  padding: 2.2rem 3rem;
+  border-radius: 0 0 1.3rem 1.3rem;
+  -webkit-border-radius: 0 0 1.3rem 1.3rem;
+  -moz-border-radius: 0 0 1.3rem 1.3rem;
+  -ms-border-radius: 0 0 1.3rem 1.3rem;
+  -o-border-radius: 0 0 1.3rem 1.3rem;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .heroInfo h1 {
   font-family: "Red Hat 900";
-  font-size: 1.9rem;
+  font-size: 1.6rem;
 }
 
-.heroInfo p {
+.heroInfo .desc {
   text-align: center;
   font-size: 0.9rem;
   margin-top: 0.7rem;
 }
 
-.planBox {
+.btnBoxes {
+  margin-top: 1.5rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.btnBoxes .paymentBtn {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 3rem;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.3);
+  font-family: "Red Hat 900";
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.btnBoxes .paymentBtn:hover {
+  background-color: hsl(244, 82%, 68%) !important;
+}
+
+.btnBoxes span {
+  margin-top: 1rem;
+  font-family: "Red Hat 900";
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btnBoxes span:hover {
+  color: hsl(223, 47%, 23%) !important;
+}
+
+@media screen and (max-width: 400px) {
+  .heroInfo {
+    padding: 2rem 1.5rem;
+  }
+
+  .heroInfo h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroInfo .desc {
+    font-size: 0.85rem;
+  }
 }

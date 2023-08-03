@@ -1,0 +1,45 @@
+.panelBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  -ms-border-radius: 0.7rem;
+  -o-border-radius: 0.7rem;
+  margin-top: 1rem;
+}
+
+.panelBox .panelName {
+  display: flex;
+}
+
+.panelBox .panelName img {
+  width: 3rem;
+}
+
+.panelBox .panelName .info {
+  margin-left: 1rem;
+}
+
+.panelBox .panelName .info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.panelBox .panelName .info span {
+  font-size: 0.95rem;
+}
+
+.panelBox .change {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: "Red Hat 700";
+}
+
+.panelBox .change:hover {
+  text-decoration: none;
+}
