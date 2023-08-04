@@ -4,7 +4,7 @@ This is a solution to the order summary component challenge on frontend mentor
 
 ## Screenshot
 
-![Design preview for the Intro component with sign up form coding challenge](./src/assets/images/desktop-preview.jpg)
+![Design preview for the Order summary component coding challenge](./src/assets/images/desktop-preview.jpg)
 
 ## Built with
 
