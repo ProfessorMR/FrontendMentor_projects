@@ -16,7 +16,7 @@
   display: flex;
 }
 
-.panelBox .panelName img {
+.panelBox .panelName .iconImage {
   width: 3rem;
 }
 
@@ -24,12 +24,12 @@
   margin-left: 1rem;
 }
 
-.panelBox .panelName .info h4 {
+.panelBox .panelName .info .titleInfo {
   font-size: 1rem;
   margin-bottom: 0.2rem;
 }
 
-.panelBox .panelName .info span {
+.panelBox .panelName .info .amount {
   font-size: 0.95rem;
 }
 

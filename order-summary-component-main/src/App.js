@@ -5,9 +5,9 @@ import Card from "./components/Card";
 
 const App = () => {
   return (
-    <div className="App" style={{ backgroundColor: PALE_BLUE }}>
+    <main className="App" style={{ backgroundColor: PALE_BLUE }}>
       <Card />
-    </div>
+    </main>
   );
 };
 

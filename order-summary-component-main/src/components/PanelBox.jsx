@@ -12,10 +12,14 @@ const PanelBox = () => {
   return (
     <div className="panelBox" style={{ backgroundColor: VERY_PALE_BLUE }}>
       <div className="panelName">
-        <img src={iconMusic} alt="iconImage" />
+        <img className="iconImage" src={iconMusic} alt="iconImage" />
         <div className="info">
-          <h4 style={{ color: DARK_BLUE }}>Annual Plan</h4>
-          <span style={{ color: DESATURATED_BLUE }}>$59.99/year</span>
+          <h1 className="titleInfo" style={{ color: DARK_BLUE }}>
+            Annual Plan
+          </h1>
+          <span className="amount" style={{ color: DESATURATED_BLUE }}>
+            $59.99/year
+          </span>
         </div>
       </div>
       <p className="change" style={{ color: BRIGHT_BLUE }}>

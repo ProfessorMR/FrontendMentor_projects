@@ -5,7 +5,7 @@ import "./HeroImage.css";
 const HeroImage = () => {
   return (
     <div className="heroImage">
-      <img src={heroImg} alt="hero" />
+      <img className="img" src={heroImg} alt="hero" />
     </div>
   );
 };

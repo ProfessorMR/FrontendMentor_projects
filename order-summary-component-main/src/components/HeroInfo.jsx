@@ -6,7 +6,7 @@ import "./HeroInfo.css";
 const HeroInfo = () => {
   return (
     <div className="heroInfo">
-      <h1 style={{ color: DARK_BLUE }}>Order Summary</h1>
+      <h1 className="title" style={{ color: DARK_BLUE }}>Order Summary</h1>
       <p className="desc" style={{ color: DESATURATED_BLUE }}>
         {" "}
         You can now listen to millions of songs, audiobooks, and podcasts on any
@@ -17,7 +17,7 @@ const HeroInfo = () => {
         <button className="paymentBtn" style={{ backgroundColor: BRIGHT_BLUE }}>
           Proceed to Payment
         </button>
-        <span style={{ color: DESATURATED_BLUE }}>Cancel Order</span>
+        <span className="cancelBtn" style={{ color: DESATURATED_BLUE }}>Cancel Order</span>
       </div>
     </div>
   );

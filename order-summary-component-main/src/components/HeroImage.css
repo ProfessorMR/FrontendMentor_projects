@@ -3,7 +3,7 @@
   display: flex;
 }
 
-.heroImage img {
+.heroImage .img {
   width: 100%;
   border-radius: 1.3rem 1.3rem 0 0;
   -webkit-border-radius: 1.3rem 1.3rem 0 0;
