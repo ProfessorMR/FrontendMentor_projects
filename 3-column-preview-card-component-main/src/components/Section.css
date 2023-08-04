@@ -1,0 +1,28 @@
+.sectionCard {
+  width: 20rem;
+}
+
+.sectionCard .iconImage {
+  width: 4rem;
+}
+
+.sectionCard .title {
+  font-family: "Big Shoulders";
+  margin-top: 2.5rem;
+}
+
+.sectionCard .descCard {
+  line-height: 1.6rem;
+}
+
+.sectionCard .btnLearn {
+  font-size: 0.9rem;
+  margin-top: 3.5rem;
+  padding: 0.7rem 2rem;
+}
+
+.sectionCard .btnLearn:hover {
+  background-color: transparent !important;
+  outline: 0.2em solid hsl(0, 0%, 95%) !important;
+  color: hsla(0, 0%, 100%, 0.75) !important;
+}
