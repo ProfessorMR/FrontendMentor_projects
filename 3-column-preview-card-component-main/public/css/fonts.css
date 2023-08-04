@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/LexendDeca-Medium.eot");
+  src: url("../fonts/LexendDeca-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/LexendDeca-Medium.woff2") format("woff2"),
+    url("../fonts/LexendDeca-Medium.woff") format("woff"),
+    url("../fonts/LexendDeca-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Big Shoulders";
+  src: url("../fonts/BigShouldersDisplay-Bold.eot");
+  src: url("../fonts/BigShouldersDisplay-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/BigShouldersDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/BigShouldersDisplay-Bold.woff") format("woff"),
+    url("../fonts/BigShouldersDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
