@@ -1,6 +1,7 @@
 import Section from "./Section";
 import Colors from "../helpers/Colors";
 import Info from "../helpers/Info";
+import { LUXURY_BORDER, SEDANS_BORDER } from "../helpers/Border";
 
 import iconLuxury from "../assets/images/icon-luxury.svg";
 import iconSedans from "../assets/images/icon-sedans.svg";
@@ -15,7 +16,7 @@ const Card = () => {
         alt="sedans"
         title={Info[0].sedansTitle}
         desc={Info[0].sedansDesc}
-        border={Info[0].border}
+        border={SEDANS_BORDER}
       />
       <Section
         bgColor={Colors.DARK_CYAN}
@@ -30,7 +31,7 @@ const Card = () => {
         alt="luxury"
         title={Info[2].luxuryTitle}
         desc={Info[2].luxuryDesc}
-        border={Info[2].border}
+        border={LUXURY_BORDER}
       />
     </div>
   );

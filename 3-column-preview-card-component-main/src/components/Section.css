@@ -26,3 +26,26 @@
   outline: 0.2em solid hsl(0, 0%, 95%) !important;
   color: hsla(0, 0%, 100%, 0.75) !important;
 }
+
+@media screen and (max-width: 992px) {
+  .sectionCard {
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .sectionCard:nth-child(1) {
+    border-radius: 0.7rem 0.7rem 0 0 !important;
+    -webkit-border-radius: 0.7rem 0.7rem 0 0 !important;
+    -moz-border-radius: 0.7rem 0.7rem 0 0 !important;
+    -ms-border-radius: 0.7rem 0.7rem 0 0 !important;
+    -o-border-radius: 0.7rem 0.7rem 0 0 !important;
+  }
+
+  .sectionCard:nth-child(3) {
+    border-radius: 0 0 0.7rem 0.7rem !important;
+    -webkit-border-radius: 0 0 0.7rem 0.7rem !important;
+    -moz-border-radius: 0 0 0.7rem 0.7rem !important;
+    -ms-border-radius: 0 0 0.7rem 0.7rem !important;
+    -o-border-radius: 0 0 0.7rem 0.7rem !important;
+  }
+}

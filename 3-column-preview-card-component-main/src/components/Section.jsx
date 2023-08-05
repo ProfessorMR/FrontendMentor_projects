@@ -5,7 +5,7 @@ import "./Section.css";
 const Section = ({ bgColor, icon, alt, title, desc, border }) => {
   return (
     <div
-      className="p-5 sectionCard d-flex align-items-start justify-content-center flex-column"
+      className="sectionCard p-5 d-flex align-items-start justify-content-center flex-column"
       style={{ backgroundColor: bgColor, borderRadius: border }}
     >
       <img className="iconImage" src={icon} alt={alt} />
