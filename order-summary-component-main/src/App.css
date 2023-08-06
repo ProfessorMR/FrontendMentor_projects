@@ -8,3 +8,9 @@
   justify-content: center;
   min-height: 100vh;
 }
+
+@media screen and (max-width: 576px) {
+  .App {
+    background-image: url("../src/assets/images/pattern-background-mobile.svg");
+  }
+}
