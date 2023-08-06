@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Outfit Light";
+  src: url("../fonts/Outfit-Light.eot");
+  src: url("../fonts/Outfit-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Outfit-Light.woff2") format("woff2"),
+    url("../fonts/Outfit-Light.woff") format("woff"),
+    url("../fonts/Outfit-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../fonts/Outfit-Regular.eot");
+  src: url("../fonts/Outfit-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Outfit-Regular.woff2") format("woff2"),
+    url("../fonts/Outfit-Regular.woff") format("woff"),
+    url("../fonts/Outfit-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit Bold";
+  src: url("../fonts/Outfit-Bold.eot");
+  src: url("../fonts/Outfit-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Outfit-Bold.woff2") format("woff2"),
+    url("../fonts/Outfit-Bold.woff") format("woff"),
+    url("../fonts/Outfit-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
