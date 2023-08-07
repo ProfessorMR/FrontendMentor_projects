@@ -1,0 +1,25 @@
+.titleNft {
+  font-size: 1rem;
+}
+
+.ethereumText {
+  font-size: 0.9rem;
+}
+
+.imageCreator {
+  width: 2rem;
+  outline: 0.1rem solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.creator {
+  border-top: 0.1rem solid hsl(215, 32%, 27%);
+}
+
+.textCreator {
+  font-size: 0.9rem;
+}
