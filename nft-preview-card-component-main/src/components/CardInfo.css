@@ -1,5 +1,11 @@
 .titleNft {
   font-size: 1rem;
+  cursor: pointer;
+  font-family: "Outfit Bold";
+}
+
+.titleNft:hover {
+  color: hsl(178, 100%, 50%) !important;
 }
 
 .ethereumText {
@@ -22,4 +28,12 @@
 
 .textCreator {
   font-size: 0.9rem;
+}
+
+.textCreator .nameCreator {
+  cursor: pointer;
+}
+
+.textCreator .nameCreator:hover {
+  color: hsl(178, 100%, 50%) !important;
 }

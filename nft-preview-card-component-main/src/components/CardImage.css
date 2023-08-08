@@ -1,0 +1,9 @@
+.mainImageNft .viewBox {
+  visibility: hidden;
+  cursor: pointer;
+  background-color: hsla(178, 100%, 50%, 0.6);
+}
+
+.mainImageNft:hover .viewBox {
+  visibility: visible;
+}

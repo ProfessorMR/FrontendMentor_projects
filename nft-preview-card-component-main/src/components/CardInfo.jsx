@@ -38,8 +38,15 @@ const CardInfo = () => {
       </div>
       <div className="creator pt-3 d-flex align-items-center justify-content-start">
         <img className="imageCreator" src={avatar} alt="avatar" />
-        <p className="mb-0 ms-3 textCreator" style={{ color: Colors.SOFT_BLUE }}>
-          Creation of <span style={{ color: Colors.WHITE }}> Jules Wyvern</span>
+        <p
+          className="mb-0 ms-3 textCreator"
+          style={{ color: Colors.SOFT_BLUE }}
+        >
+          Creation of{" "}
+          <span className="nameCreator" style={{ color: Colors.WHITE }}>
+            {" "}
+            Jules Wyvern
+          </span>
         </p>
       </div>
     </div>
