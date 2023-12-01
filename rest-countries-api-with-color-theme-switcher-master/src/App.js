@@ -1,10 +1,11 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import { Countries, Navbar } from "./components";
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <Countries/>
     </>
   );
 };

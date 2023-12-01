@@ -10,12 +10,14 @@ body {
   --color-background: hsl(0, 0%, 98%);
   --color-text: hsl(200, 15%, 8%);
   --color-item: hsl(0, 0%, 100%);
+  --color-input: hsl(0, 0%, 52%);
 }
 
 body.dark {
   --color-background: hsl(207, 26%, 17%);
   --color-text: hsl(0, 0%, 100%);
   --color-item: hsl(209, 23%, 22%);
+  --color-input: hsl(0, 0%, 100%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +26,16 @@ body.dark {
     color: var(--color-text);
   }
 
-  .navbar-area{
+  .navbar-area {
     background-color: var(--color-item);
+  }
+
+  .search-area {
+    background-color: var(--color-item);
+  }
+
+  .search-area input {
+    background-color: var(--color-item);
+    color: var(--color-input);
   }
 }
