@@ -1,10 +1,9 @@
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-  return (
-    <div>
-    </div>
-  );
+
+  return <Navbar />;
 };
 
 export default App;
