@@ -1,8 +1,7 @@
 import React from "react";
-import Filter from "./Filter";
 
 const Countries = () => {
-  return <Filter />;
+  return <></>;
 };
 
 export default Countries;

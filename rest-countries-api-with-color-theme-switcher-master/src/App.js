@@ -1,11 +1,12 @@
 import "./App.css";
-import { Countries, Navbar } from "./components";
+import {Navbar } from "./components";
+import CountriesPage from "./components/Countries/countriesPage";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Countries/>
+      <CountriesPage/>
     </>
   );
 };

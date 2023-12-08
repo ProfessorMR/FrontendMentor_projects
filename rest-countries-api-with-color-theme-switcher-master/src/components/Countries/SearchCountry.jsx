@@ -2,7 +2,7 @@ const SearchCountry = () => {
   return (
     <div className="search-area rounded shadow-md w-96">
       <form >
-        <div className="py-4 flex items-center flex-row-reverse">
+        <div className="py-4 flex items-center flex-row-reverse justify-end">
           <input
             type="text"
             placeholder="Search for a country..."
