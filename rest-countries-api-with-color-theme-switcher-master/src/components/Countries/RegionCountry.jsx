@@ -28,16 +28,16 @@ const RegionCountry = () => {
   }, [isDropdown]);
 
   return (
-    <div>
+    <div className="dropdown-main relative">
       <div
         onClick={handleDropdown}
-        className="rounded shadow cursor-pointer flex items-center justify-between px-6 py-3"
+        className="dropdown-btn rounded shadow-lg cursor-pointer flex items-center justify-between px-6 py-3"
       >
         <h3 className="font-semibold me-8">{btnTextDropdown}</h3>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
-      <div className="rounded shadow w-full mt-1 hidden z-10" ref={dropdown}>
-        <ul>
+      <div className="absolute dropdown-content rounded shadow w-full mt-1 hidden z-10" ref={dropdown}>
+        <ul className="w-full">
           {continents &&
             continents.map((continent) => (
               <li

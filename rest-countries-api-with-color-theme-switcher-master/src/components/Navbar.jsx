@@ -15,7 +15,7 @@ const Navbar = () => {
   }, [isDark]);
 
   return (
-    <div className="shadow py-5 px-10 navbar-area">
+    <div className="shadow py-5 px-20 navbar-area">
       <div className="container mx-auto">
         <div className="flex items-center justify-between w-full">
           <h1 className="font-extrabold text-lg">Where in the world?</h1>

@@ -38,4 +38,20 @@ body.dark {
     background-color: var(--color-item);
     color: var(--color-input);
   }
+
+  .dropdown-main .dropdown-btn {
+    background-color: var(--color-item);
+  }
+
+  .dropdown-main .dropdown-content {
+    background-color: var(--color-item);
+  }
+
+  .country-cards-main .card{
+    background-color: var(--color-item);
+  }
+
+  .country-cards-main .card p span{
+    color: var(--color-input);
+  }
 }

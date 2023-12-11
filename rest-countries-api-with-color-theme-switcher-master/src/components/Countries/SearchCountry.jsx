@@ -6,7 +6,7 @@ const SearchCountry = () => {
           <input
             type="text"
             placeholder="Search for a country..."
-            className="border-none outline-none text-sm font-semibold"
+            className="border-none outline-none text-sm font-semibold w-full pe-4"
           />
           <button type="submit" className="w-16 h-full flex items-center justify-center">
             <ion-icon name="search-outline" className="text-lg"></ion-icon>
