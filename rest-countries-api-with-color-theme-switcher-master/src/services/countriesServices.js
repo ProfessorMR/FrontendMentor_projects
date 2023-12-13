@@ -1,21 +1,21 @@
 import axios from "axios";
 
-const SERVER_URL = "https://restcountries.com/";
+const SERVER_URL = "https://restcountries.com/v3.1";
 
 export const getAllCountries = () => {
-  const url = `${SERVER_URL}/v3.1/all`;
+  const url = `${SERVER_URL}/all`;
 
   return axios.get(url);
 };
 
 export const getCountry = (name) => {
-  const url = `${SERVER_URL}/v3.1/name/${name}`;
+  const url = `${SERVER_URL}/name/${name}`;
 
   return axios.get(url);
 };
 
 export const getCountriesFromRegion = (region) => {
-  const url = `${SERVER_URL}/v3.1/region/${region}`;
+  const url = `${SERVER_URL}/region/${region}`;
 
   return axios.get(url);
 };
