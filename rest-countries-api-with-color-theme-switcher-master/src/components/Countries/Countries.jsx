@@ -12,10 +12,10 @@ const Countries = () => {
       {loading ? (
         <Spinner />
       ) : (
-        <section className="my-10 country-cards-main">
-          <div className="container mx-auto px-20">
+        <section className="my-10 country-cards-main px-10 md:px-20">
+          <div className="container mx-auto">
             {filterCountries.length > 0 ? (
-              <div className="grid grid-cols-4 gap-20">
+              <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-20">
                 {filterCountries.map((country) => (
                   <CountryCard key={country.name.common} country={country} />
                 ))}

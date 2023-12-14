@@ -9,7 +9,7 @@ const RegionCountry = () => {
 
   const dropdown = useRef(null);
 
-  const continents = ["All","Africa", "America", "Asia", "Europe", "Oceania"];
+  const continents = ["All", "Africa", "America", "Asia", "Europe", "Oceania"];
 
   const handleDropdown = () => {
     setIsDropdown(!isDropdown);
@@ -18,8 +18,8 @@ const RegionCountry = () => {
   const handleContinentClick = (continent) => {
     setBtnTextDropdown(continent);
     setIsDropdown(false);
-    
-    countryRegionFilter(continent)
+
+    countryRegionFilter(continent);
   };
 
   useEffect(() => {
@@ -33,12 +33,12 @@ const RegionCountry = () => {
   }, [isDropdown]);
 
   return (
-    <div className="dropdown-main relative w-52">
+    <div className="dropdown-main relative w-52 mt-10 md:m-0">
       <div
         onClick={handleDropdown}
         className="dropdown-btn rounded shadow-lg cursor-pointer flex items-center justify-between px-6 py-3"
       >
-        <h3 className="font-semibold me-8">{btnTextDropdown}</h3>
+        <h3 className="font-semibold me-8 text-sm">{btnTextDropdown}</h3>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
       <div

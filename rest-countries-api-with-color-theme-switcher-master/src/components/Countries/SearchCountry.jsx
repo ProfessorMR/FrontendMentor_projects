@@ -5,7 +5,7 @@ const SearchCountry = () => {
   const { countrySearchFilter } = useContext(CountryContext);
 
   return (
-    <div className="search-area rounded shadow-md w-96">
+    <div className="search-area rounded shadow-md md:w-96 w-full">
       <form>
         <div className="py-4 flex items-center flex-row-reverse justify-end">
           <input
