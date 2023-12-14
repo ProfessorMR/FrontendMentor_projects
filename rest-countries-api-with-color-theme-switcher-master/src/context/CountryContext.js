@@ -8,4 +8,5 @@ export const CountryContext = createContext({
   countrySearchFilter: () => {},
   filterCountries: [],
   setFilterCountries: () => {},
+  countryRegionFilter: () => {},
 });
