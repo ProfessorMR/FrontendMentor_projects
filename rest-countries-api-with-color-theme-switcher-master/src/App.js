@@ -4,10 +4,12 @@ import { Navbar } from "./components";
 import CountriesPage from "./components/Countries/countriesPage";
 import { getAllCountries } from "./services/countriesServices";
 import { CountryContext } from "./context/CountryContext";
+import _ from "lodash";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [countries, setCountries] = useState([]);
+  const [filterCountries, setFilterCountries] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,9 +17,9 @@ const App = () => {
         setLoading(true);
 
         const { data } = await getAllCountries();
-        console.log(data);
 
         setCountries(data);
+        setFilterCountries(data);
 
         setLoading(false);
       } catch (err) {
@@ -29,6 +31,18 @@ const App = () => {
     fetchData();
   }, []);
 
+  const countrySearchFilter = _.debounce((query) => {
+    if (!query) {
+      setFilterCountries([...countries]);
+    } else {
+      setFilterCountries((filteredCountries) => {
+        return filteredCountries.filter((filterCountry) =>
+          filterCountry.name.common.toLowerCase().includes(query.toLowerCase())
+        );
+      });
+    }
+  }, 1000);
+
   return (
     <>
       <CountryContext.Provider
@@ -37,6 +51,9 @@ const App = () => {
           setLoading,
           countries,
           setCountries,
+          countrySearchFilter,
+          filterCountries,
+          setFilterCountries,
         }}
       >
         <Navbar />

@@ -1,8 +1,11 @@
 import { createContext } from "react";
 
 export const CountryContext = createContext({
-  loadding: false,
+  loading: false,
   setLoading: () => {},
   countries: [],
   setCountries: () => {},
+  countrySearchFilter: () => {},
+  filterCountries: [],
+  setFilterCountries: () => {},
 });
