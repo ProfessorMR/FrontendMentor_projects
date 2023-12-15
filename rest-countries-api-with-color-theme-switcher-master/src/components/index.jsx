@@ -1,4 +1,5 @@
 // country components
+export { default as CountriesPage } from "../components/Countries/countriesPage";
 export { default as Countries } from "../components/Countries/Countries";
 export { default as Country } from "../components/Countries/Country";
 export { default as Filter } from "../components/Countries/Filter";

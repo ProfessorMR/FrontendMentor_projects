@@ -19,3 +19,9 @@ export const getCountriesFromRegion = (region) => {
 
   return axios.get(url);
 };
+
+export const getCountryFromCode = (code) => {
+  const url = `${SERVER_URL}/alpha/${code}`;
+
+  return axios.get(url);
+};

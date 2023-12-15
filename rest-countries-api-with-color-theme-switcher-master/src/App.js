@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Navbar } from "./components";
-import CountriesPage from "./components/Countries/countriesPage";
 import {
   getAllCountries,
   getCountriesFromRegion,
 } from "./services/countriesServices";
 import { CountryContext } from "./context/CountryContext";
 import _ from "lodash";
+import Router from "./routes/Router";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -35,7 +35,7 @@ const App = () => {
   }, []);
 
   const countrySearchFilter = _.debounce((query) => {
-    if (query === "") {
+    if (!query) {
       setFilterCountries([...countries]);
     } else {
       setFilterCountries((filteredCountries) => {
@@ -87,7 +87,7 @@ const App = () => {
         }}
       >
         <Navbar />
-        <CountriesPage />
+        <Router />
       </CountryContext.Provider>
     </>
   );

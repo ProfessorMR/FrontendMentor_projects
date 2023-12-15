@@ -47,11 +47,19 @@ body.dark {
     background-color: var(--color-item);
   }
 
-  .country-cards-main .card{
+  .country-cards-main .card {
     background-color: var(--color-item);
   }
 
-  .country-cards-main .card p span{
+  .country-cards-main .card p span {
     color: var(--color-input);
   }
+
+  .single-country-page .back-btn {
+    background-color: var(--color-item);
+  }
+}
+
+.single-country-page .back-btn ion-icon {
+  margin-right: .5rem;
 }
