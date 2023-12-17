@@ -5,7 +5,9 @@ const RegionCountry = () => {
   const { countryRegionFilter } = useContext(CountryContext);
 
   const [isDropdown, setIsDropdown] = useState(false);
-  const [btnTextDropdown, setBtnTextDropdown] = useState("Filter by Region");
+  const [btnTextDropdown, setBtnTextDropdown] = useState(() => {
+    return localStorage.getItem("selectedRegion") || "Filter by Region";
+  });
 
   const dropdown = useRef(null);
 
@@ -20,6 +22,8 @@ const RegionCountry = () => {
     setIsDropdown(false);
 
     countryRegionFilter(continent);
+
+    localStorage.setItem("selectedRegion", continent);
   };
 
   useEffect(() => {

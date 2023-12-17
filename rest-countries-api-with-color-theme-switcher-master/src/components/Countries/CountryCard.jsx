@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const CountryCard = ({ country }) => {
   return (
-    <Link to={`/${country.name.common}`}>
+    <Link to={`/${country.name.official}`}>
       <div className="rounded-lg shadow-md card">
         <div className="w-full h-40">
           <img

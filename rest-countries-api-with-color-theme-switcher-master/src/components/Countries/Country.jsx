@@ -36,11 +36,11 @@ const Country = () => {
       try {
         setLoading(true);
 
-        const { data: CountryInfo } = await getCountry(countryName);
-        setCountry(CountryInfo);
+        const { data: countryInfo } = await getCountry(countryName);
+        setCountry(countryInfo);
 
-        if (typeof CountryInfo[0].borders !== "undefined") {
-          await getCountryNames(CountryInfo[0].borders);
+        if (typeof countryInfo[0].borders !== "undefined") {
+          await getCountryNames(countryInfo[0].borders);
         }
 
         setLoading(false);
@@ -79,7 +79,9 @@ const Country = () => {
                         Native Name:{" "}
                         <span className="font-light">
                           {" "}
-                          {country[0].name.official}
+                          {Object.values(country[0].name.nativeName)
+                            .map((language) => language.common)
+                            .join(", ")}
                         </span>
                       </p>
                       <p className="font-semibold mt-2">
