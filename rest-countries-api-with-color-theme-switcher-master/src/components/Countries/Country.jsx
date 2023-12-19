@@ -79,13 +79,13 @@ const Country = () => {
               <p className="text-md">Back</p>
             </Link>
             {country.length > 0 ? (
-              <div className="flex justify-between flex-row-reverse gap-20 mt-20">
-                <div className="w-2/4">
-                  <h1 className="font-extrabold text-3xl">
+              <div className="flex justify-between flex-wrap flex-col-reverse items-center lg:flex-row-reverse lg:items-start lg:flex-nowrap gap-10 lg:gap-20 mt-20 mb-4">
+                <div className="w-full lg:w-2/4">
+                  <h1 className="font-extrabold text-2xl md:text-3xl">
                     {country[0].name.common}
                   </h1>
-                  <div className="flex justify-between gap-5 mt-7">
-                    <div>
+                  <div className="flex flex-wrap lg:justify-between lg:flex-nowrap gap-5 mt-7">
+                    <div className="w-full lg:w-2/4">
                       <p className="font-semibold">
                         Native Name:{" "}
                         <span className="font-light">
@@ -120,7 +120,7 @@ const Country = () => {
                         </span>
                       </p>
                     </div>
-                    <div>
+                    <div className="mt-10 lg:m-0 w-full lg:w-2/4">
                       <p className="font-semibold">
                         Top Level Domain:{" "}
                         <span className="font-light"> {country[0].tld}</span>
@@ -140,9 +140,9 @@ const Country = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center mt-16">
-                    <p className="font-semibold">Border Countries: </p>
-                    <div className="flex flex-wrap ms-4 gap-3">
+                  <div className="flex items-center flex-wrap lg:flex-nowrap mt-10 lg:mt-16">
+                    <p className="font-semibold w-full lg:w-auto">Border Countries: </p>
+                    <div className="flex flex-wrap mt-3 ms-0 lg:ms-4 lg:mt-0 gap-3 w-full lg:w-auto">
                       {codeNames.length > 0 ? (
                         codeNames.map((country) => (
                           <Link
@@ -161,7 +161,7 @@ const Country = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-2/4">
+                <div className="w-full lg:w-2/4">
                   <img
                     src={country[0].flags.svg}
                     className="w-full object-cover aspect-video shadow-md"

@@ -15,7 +15,7 @@ const Countries = () => {
         <section className="my-10 country-cards-main px-10 md:px-20">
           <div className="container mx-auto">
             {filterCountries.length > 0 ? (
-              <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-20">
+              <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-10 xl:gap-20">
                 {filterCountries.map((country) => (
                   <CountryCard key={country.name.common} country={country} />
                 ))}
