@@ -1,4 +1,3 @@
-import React from "react";
 import Countries from "./Countries";
 import Filter from "./Filter";
 

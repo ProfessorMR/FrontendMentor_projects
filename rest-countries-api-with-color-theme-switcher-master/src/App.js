@@ -69,11 +69,8 @@ const App = () => {
         value={{
           loading,
           setLoading,
-          filterCountries,
-          setFilterCountries,
-          querySearch,
           setQuerySearch,
-          selectedRegion,
+          filterCountries,
           setSelectedRegion,
           setActiveRedirect,
         }}

@@ -3,7 +3,6 @@ export { default as CountriesPage } from "../components/Countries/countriesPage"
 export { default as Countries } from "../components/Countries/Countries";
 export { default as Country } from "../components/Countries/Country";
 export { default as Filter } from "../components/Countries/Filter";
-export { default as FilteredCountry } from "../components/Countries/FilteredCountry";
 export { default as SearchCountry } from "../components/Countries/SearchCountry";
 
 // other components

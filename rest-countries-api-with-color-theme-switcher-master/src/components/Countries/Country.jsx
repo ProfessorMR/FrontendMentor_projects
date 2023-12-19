@@ -141,7 +141,9 @@ const Country = () => {
                     </div>
                   </div>
                   <div className="flex items-center flex-wrap lg:flex-nowrap mt-10 lg:mt-16">
-                    <p className="font-semibold w-full lg:w-auto">Border Countries: </p>
+                    <p className="font-semibold w-full lg:w-auto">
+                      Border Countries:{" "}
+                    </p>
                     <div className="flex flex-wrap mt-3 ms-0 lg:ms-4 lg:mt-0 gap-3 w-full lg:w-auto">
                       {codeNames.length > 0 ? (
                         codeNames.map((country) => (
@@ -154,8 +156,8 @@ const Country = () => {
                           </Link>
                         ))
                       ) : (
-                        <p className="w-24 py-1 text-center text-sm back-btn rounded-sm shadow-lg">
-                          no boundaries
+                        <p className="px-4 py-1 text-center font-semibold text-sm back-btn rounded-sm shadow-lg">
+                          There are no boundaries
                         </p>
                       )}
                     </div>
