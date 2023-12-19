@@ -1,5 +1,4 @@
 {
-  "homepage": "https://ProfessorMR.github.io/FrontendMentor_projects/rest-countries-api-with-color-theme-switcher-master",
   "name": "rest-countries-api-with-color-theme-switcher-master",
   "version": "0.1.0",
   "private": true,
@@ -16,8 +15,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build && xcopy README.md build\\",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,7 +39,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0",
     "tailwindcss": "^3.3.5"
   }
 }
