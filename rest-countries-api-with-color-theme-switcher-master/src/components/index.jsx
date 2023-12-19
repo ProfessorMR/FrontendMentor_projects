@@ -9,3 +9,4 @@ export { default as SearchCountry } from "../components/Countries/SearchCountry"
 // other components
 export { default as Navbar } from "../components/Navbar";
 export { default as Spinner } from "../components/Spinner";
+export { default as PageNotFound } from "../components/errors/PageNotFound";

@@ -146,7 +146,7 @@ const Country = () => {
                       {codeNames.length > 0 ? (
                         codeNames.map((country) => (
                           <Link
-                            to={`/${country}`}
+                            to={`/countries/${country}`}
                             key={country}
                             className="px-4 py-1 text-center text-sm back-btn rounded-sm shadow-lg"
                           >

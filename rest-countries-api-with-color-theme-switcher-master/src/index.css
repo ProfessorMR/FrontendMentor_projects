@@ -58,6 +58,10 @@ body.dark {
   .single-country-page .back-btn {
     background-color: var(--color-item);
   }
+
+  .back-homepage{
+    background-color: var(--color-item);
+  }
 }
 
 .single-country-page .back-btn ion-icon {

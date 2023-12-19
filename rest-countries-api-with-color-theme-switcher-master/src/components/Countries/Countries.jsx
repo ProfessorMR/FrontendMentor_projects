@@ -2,7 +2,7 @@ import { useContext } from "react";
 import CountryCard from "./CountryCard";
 import { CountryContext } from "../../context/CountryContext";
 import Spinner from "../Spinner";
-import emptyData from "../../assets/empty-data.png";
+import emptyData from "../../assets/images/empty-data.png";
 
 const Countries = () => {
   const { loading, filterCountries } = useContext(CountryContext);
