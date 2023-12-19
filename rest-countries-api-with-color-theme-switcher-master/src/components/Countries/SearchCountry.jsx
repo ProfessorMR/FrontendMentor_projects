@@ -6,7 +6,7 @@ const SearchCountry = () => {
 
   return (
     <div className="search-area rounded shadow-md md:w-96 w-full">
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <div className="py-4 flex items-center flex-row-reverse justify-end">
           <input
             type="text"
@@ -15,8 +15,7 @@ const SearchCountry = () => {
             onChange={(e) => setQuerySearch(e.target.value)}
           />
           <button
-            type="submit"
-            className="w-16 h-full flex items-center justify-center"
+            className="w-16 cursor-default h-full flex items-center justify-center"
           >
             <ion-icon name="search-outline" className="text-lg"></ion-icon>
           </button>

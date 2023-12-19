@@ -9,7 +9,7 @@ export const getAllCountries = () => {
 };
 
 export const getCountry = (name) => {
-  const url = `${SERVER_URL}/name/${name}`;
+  const url = `${SERVER_URL}/name/${name}?fullText=true`;
 
   return axios.get(url);
 };

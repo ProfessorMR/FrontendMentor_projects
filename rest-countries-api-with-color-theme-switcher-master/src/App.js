@@ -6,6 +6,7 @@ import {
 } from "./services/countriesServices";
 import { CountryContext } from "./context/CountryContext";
 import Router from "./routes/Router";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,10 @@ const App = () => {
 
       setFilterCountries(() => {
         return newData.data.filter((country) =>
-          country.name.common.toLowerCase().includes(querySearch.toLowerCase())
+          country.name.common
+            .toLowerCase()
+            .trim()
+            .includes(querySearch.trim().toLowerCase())
         );
       });
 
@@ -64,7 +68,7 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <HelmetProvider>
       <CountryContext.Provider
         value={{
           loading,
@@ -77,8 +81,13 @@ const App = () => {
       >
         <Navbar />
         <Router />
+        <Helmet>
+          <title>
+            Frontend Mentor | REST Countries API with color theme switcher
+          </title>
+        </Helmet>
       </CountryContext.Provider>
-    </>
+    </HelmetProvider>
   );
 };
 
