@@ -7,6 +7,7 @@ import {
 import { CountryContext } from "./context/CountryContext";
 import Router from "./routes/Router";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Readme from './components/Readme';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -87,6 +88,7 @@ const App = () => {
           </title>
         </Helmet>
       </CountryContext.Provider>
+      <Readme/>
     </HelmetProvider>
   );
 };
