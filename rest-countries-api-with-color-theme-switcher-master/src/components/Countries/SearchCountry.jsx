@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CountryContext } from "../../context/CountryContext";
 
 const SearchCountry = () => {
-  const { querySearch, setQuerySearch } = useContext(CountryContext);
+  const { setQuerySearch } = useContext(CountryContext);
 
   return (
     <div className="search-area rounded shadow-md md:w-96 w-full">
@@ -12,7 +12,6 @@ const SearchCountry = () => {
             type="text"
             placeholder="Search for a country..."
             className="border-none outline-none text-sm font-semibold w-full pe-4"
-            value={querySearch}
             onChange={(e) => setQuerySearch(e.target.value)}
           />
           <button

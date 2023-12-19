@@ -8,7 +8,13 @@ import {
 import Spinner from "../Spinner";
 
 const Country = () => {
-  const { loading, setLoading } = useContext(CountryContext);
+  const {
+    loading,
+    setLoading,
+    setActiveRedirect,
+    setQuerySearch,
+    setSelectedRegion,
+  } = useContext(CountryContext);
 
   const [country, setCountry] = useState([]);
   const [codeNames, setCodeNames] = useState([]);
@@ -61,6 +67,11 @@ const Country = () => {
         ) : (
           <div className="mt-1">
             <Link
+              onClick={() => {
+                setActiveRedirect(true);
+                setQuerySearch("");
+                setSelectedRegion("");
+              }}
               to="/"
               className="w-max flex px-10 py-2 items-center justify-start back-btn rounded-md shadow-xl"
             >

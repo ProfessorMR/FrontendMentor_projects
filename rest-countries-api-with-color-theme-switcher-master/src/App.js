@@ -1,93 +1,67 @@
 import { useEffect, useState, useCallback } from "react";
-import "./App.css";
 import { Navbar } from "./components";
 import {
   getAllCountries,
   getCountriesFromRegion,
-  getCountry,
 } from "./services/countriesServices";
 import { CountryContext } from "./context/CountryContext";
-import _ from "lodash";
 import Router from "./routes/Router";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [filterCountries, setFilterCountries] = useState([]);
   const [querySearch, setQuerySearch] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
+  const [activeRedirect, setActiveRedirect] = useState(false);
 
-  const fetchData = useCallback(async () => {
+  const filteredCountries = useCallback(async () => {
     try {
       setLoading(true);
 
-      const { data } = await getAllCountries();
+      let newData;
 
-      setFilterCountries(data);
+      if (activeRedirect) {
+        newData = await getAllCountries();
+        setActiveRedirect(false);
+      }
+
+      if (selectedRegion === "" || selectedRegion === "All") {
+        newData = await getAllCountries();
+      } else {
+        newData = await getCountriesFromRegion(selectedRegion);
+      }
+
+      setFilterCountries(() => {
+        return newData.data.filter((country) =>
+          country.name.common.toLowerCase().includes(querySearch.toLowerCase())
+        );
+      });
 
       setLoading(false);
     } catch (err) {
       console.error("Error:", err.message);
-      setLoading(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
-  const filteredCountriesBySearch = useCallback(async () => {
-    try {
-      setLoading(true);
-
-      if (querySearch.trim() === "") {
-        fetchData();
-      } else {
-        let { data } = await getCountry(querySearch);
-
-        setFilterCountries(data);
-      }
-
-      setLoading(false);
-    } catch (err) {
       setFilterCountries([]);
-
       setLoading(false);
     }
-  }, [querySearch, fetchData]);
+  }, [querySearch, selectedRegion, activeRedirect]);
 
   useEffect(() => {
-    const debouncedSearch = _.debounce(() => {
-      filteredCountriesBySearch();
-    }, 1000);
+    filteredCountries();
+  }, [filteredCountries]);
 
-    debouncedSearch();
+  useEffect(() => {
+    const handlePopstate = () => {
+      setActiveRedirect(true);
+      setQuerySearch("");
+      setSelectedRegion("");
+    };
+
+    window.addEventListener("popstate", handlePopstate);
 
     return () => {
-      debouncedSearch.cancel();
+      window.removeEventListener("popstate", handlePopstate);
     };
-  }, [querySearch, filteredCountriesBySearch]);
-
-  const filteredCountriesByRegion = async (continent) => {
-    try {
-      setLoading(true);
-
-      const { data } = await getCountriesFromRegion(continent);
-
-      setFilterCountries(data);
-
-      setLoading(false);
-    } catch (err) {
-      console.log("Error:", err.message);
-      setLoading(false);
-    }
-  };
-
-  const countryRegionFilter = _.debounce((continent) => {
-    if (continent === "" || continent === "All") {
-      fetchData();
-    } else {
-      filteredCountriesByRegion(continent);
-    }
-  }, 1000);
+  }, []);
 
   return (
     <>
@@ -97,9 +71,11 @@ const App = () => {
           setLoading,
           filterCountries,
           setFilterCountries,
-          countryRegionFilter,
           querySearch,
           setQuerySearch,
+          selectedRegion,
+          setSelectedRegion,
+          setActiveRedirect,
         }}
       >
         <Navbar />

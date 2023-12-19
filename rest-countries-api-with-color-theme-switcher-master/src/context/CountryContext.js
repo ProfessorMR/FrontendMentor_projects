@@ -10,4 +10,7 @@ export const CountryContext = createContext({
   filterCountries: [],
   setFilterCountries: () => {},
   countryRegionFilter: () => {},
+  selectedRegion: "",
+  setSelectedRegion: () => {},
+  setActiveRedirect: () => {},
 });

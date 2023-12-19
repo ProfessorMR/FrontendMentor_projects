@@ -2,12 +2,10 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { CountryContext } from "../../context/CountryContext";
 
 const RegionCountry = () => {
-  const { countryRegionFilter } = useContext(CountryContext);
+  const { setSelectedRegion } = useContext(CountryContext);
 
   const [isDropdown, setIsDropdown] = useState(false);
-  const [btnTextDropdown, setBtnTextDropdown] = useState(() => {
-    return localStorage.getItem("selectedRegion") || "Filter by Region";
-  });
+  const [btnTextDropdown, setBtnTextDropdown] = useState("Filter by Region");
 
   const dropdown = useRef(null);
 
@@ -18,12 +16,10 @@ const RegionCountry = () => {
   };
 
   const handleContinentClick = (continent) => {
+    setSelectedRegion(continent);
     setBtnTextDropdown(continent);
+
     setIsDropdown(false);
-
-    countryRegionFilter(continent);
-
-    localStorage.setItem("selectedRegion", continent);
   };
 
   useEffect(() => {
