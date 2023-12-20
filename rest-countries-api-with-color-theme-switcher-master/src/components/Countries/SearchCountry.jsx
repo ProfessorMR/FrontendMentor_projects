@@ -14,11 +14,9 @@ const SearchCountry = () => {
             className="border-none outline-none text-sm font-semibold w-full pe-4"
             onChange={(e) => setQuerySearch(e.target.value)}
           />
-          <button
-            className="w-16 cursor-default h-full flex items-center justify-center"
-          >
-            <ion-icon name="search-outline" className="text-lg"></ion-icon>
-          </button>
+          <div className="w-16 h-full flex items-center justify-center">
+            <ion-icon name="search-outline" aria-label="search"></ion-icon>
+          </div>
         </div>
       </form>
     </div>

@@ -23,8 +23,8 @@ const Navbar = () => {
             className="flex items-center justify-center cursor-pointer"
             onClick={() => setIsDark(!isDark)}
           >
-            <ion-icon name="moon-outline"></ion-icon>
-            <h5 className="font-semibold ms-1 text-sm md:text-md">Dark Mode</h5>
+            <ion-icon name="moon-outline" aria-label="moon"></ion-icon>
+            <h1 className="font-semibold ms-1 text-sm md:text-md">Dark Mode</h1>
           </div>
         </div>
       </div>

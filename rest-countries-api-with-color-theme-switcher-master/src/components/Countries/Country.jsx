@@ -79,7 +79,10 @@ const Country = () => {
                 to="/"
                 className="w-max flex px-10 py-2 items-center justify-start back-btn rounded-md shadow-xl"
               >
-                <ion-icon name="arrow-back-outline"></ion-icon>
+                <ion-icon
+                  name="arrow-back-outline"
+                  aria-label="arrow-back"
+                ></ion-icon>
                 <p className="text-md">Back</p>
               </Link>
               {country.length > 0 ? (
@@ -156,7 +159,7 @@ const Country = () => {
                         {codeNames.length > 0 ? (
                           codeNames.map((country) => (
                             <Link
-                              to={`/countries/${country}`}
+                              to={`/countries/${encodeURIComponent(country)}`}
                               key={country}
                               className="px-4 py-1 text-center text-sm back-btn rounded-sm shadow-lg"
                             >
