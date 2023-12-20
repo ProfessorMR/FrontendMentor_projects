@@ -38,7 +38,7 @@ const RegionCountry = () => {
         onClick={handleDropdown}
         className="dropdown-btn rounded shadow-lg cursor-pointer flex items-center justify-between px-6 py-3"
       >
-        <h3 className="font-semibold me-8 text-sm">{btnTextDropdown}</h3>
+        <h1 className="font-semibold me-8 text-sm">{btnTextDropdown}</h1>
         <ion-icon name="chevron-down-outline" aria-label="chevron"></ion-icon>
       </div>
       <div
