@@ -23,7 +23,7 @@ const Countries = () => {
             ) : (
               <div className="flex flex-col items-center justify-center">
                 <img src={emptyData} className="w-72" alt="empty" />
-                <h1 className="font-semibold">Country is not found :(</h1>
+                <h2 className="font-semibold">Country is not found :(</h2>
               </div>
             )}
           </div>
