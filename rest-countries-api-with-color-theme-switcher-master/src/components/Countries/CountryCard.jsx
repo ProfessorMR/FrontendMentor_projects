@@ -12,7 +12,7 @@ const CountryCard = ({ country }) => {
           />
         </div>
         <div className="py-9 px-6">
-          <h1 className="font-extrabold">{country.name.common}</h1>
+          <p className="font-extrabold">{country.name.common}</p>
           <div className="mt-3">
             <p className="font-semibold text-sm mt-1">
               Poplulation:{" "}
