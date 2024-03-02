@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import colors from "../utils/Colors";
 import InputDates from "./InputDates";
-// import Result from "./components/Result";
+import Results from "./Results";
 
 const BoxContainer = () => {
   return (
@@ -10,11 +10,12 @@ const BoxContainer = () => {
       sx={{
         backgroundColor: colors.White,
         width: "700px",
-        borderRadius: "10px 10px 50px 10px",
+        borderRadius: "20px 20px 150px 20px",
         padding: "30px",
       }}
     >
       <InputDates />
+      <Results />
     </Box>
   );
 };
