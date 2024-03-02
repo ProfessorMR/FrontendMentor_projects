@@ -1,14 +1,11 @@
 import React from "react";
-import {
-  Container,
-  Box,
-  InputLabel,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Container, Box, Divider, Avatar, Button } from "@mui/material";
 import Colors from "../utils/Colors";
 import { ThemeProvider } from "@emotion/react";
 import { Theme } from "../theme/Theme";
+import iconArrow from "../assets/images/icon-arrow.svg";
+import { Data } from "../data/Data";
+import SingleDate from "./SingleDate";
 
 const InputDates = () => {
   return (
@@ -16,151 +13,47 @@ const InputDates = () => {
       <Container
         component="form"
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "80%",
           margin: 0,
           padding: 0,
         }}
       >
         <Box
           sx={{
-            width: "30%",
+            display: "flex",
+            justifyContent: "space-between",
+            width: "80%",
           }}
         >
-          <InputLabel
-            htmlFor="Day"
-            sx={{
-              color: Colors.SmokeyGrey,
-              fontWeight: 700,
-              letterSpacing: "2px",
-              fontSize: "0.8rem",
-            }}
-          >
-            DAY
-          </InputLabel>
-          <TextField
-            id="Day"
-            placeholder="DD"
-            variant="outlined"
-            sx={{
-              marginTop: "4px",
-              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: Colors.Purple,
-                },
-              "& input": {
-                fontSize: "1.5rem",
-                fontWeight: 800,
-                color: Colors.OffBlack,
-                padding: "12px",
-              },
-            }}
-          />
-          <Typography
-            variant="caption"
-            sx={{
-              fontFamily: "Poppins",
-              marginTop: "5px",
-              fontStyle: "italic",
-              color: Colors.LightRed,
-              fontWeight: 400,
-              display: "block",
-              visibility: "hidden",
-            }}
-          >
-            Error
-          </Typography>
+          {Data.map((d) => (
+            <SingleDate name={d.name} placeholder={d.placeholder} key={d.id} />
+          ))}
         </Box>
-        <Box sx={{ width: "30%" }}>
-          <InputLabel
-            htmlFor="Month"
+        <Box>
+          <Divider
+            textAlign="right"
             sx={{
-              color: Colors.SmokeyGrey,
-              fontWeight: 700,
-              letterSpacing: "2px",
-              fontSize: "0.8rem",
-            }}
-          >
-            MONTH
-          </InputLabel>
-          <TextField
-            id="Month"
-            placeholder="MM"
-            variant="outlined"
-            sx={{
-              marginTop: "4px",
-              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: Colors.Purple,
-                },
-              "& input": {
-                fontSize: "1.5rem",
-                fontWeight: 800,
-                color: Colors.OffBlack,
-                padding: "12px",
+              ".MuiDivider-wrapper": {
+                padding: 0,
+              },
+              "&.MuiDivider-root::after": {
+                width: 0,
               },
             }}
-          />
-          <Typography
-            variant="caption"
-            sx={{
-              fontFamily: "Poppins",
-              marginTop: "5px",
-              fontStyle: "italic",
-              color: Colors.LightRed,
-              fontWeight: 400,
-              display: "block",
-              visibility: "hidden",
-            }}
           >
-            Error
-          </Typography>
-        </Box>
-        <Box sx={{ width: "30%" }}>
-          <InputLabel
-            htmlFor="Year"
-            sx={{
-              color: Colors.SmokeyGrey,
-              fontWeight: 700,
-              letterSpacing: "2px",
-              fontSize: "0.8rem",
-            }}
-          >
-            YEAR
-          </InputLabel>
-          <TextField
-            id="Year"
-            placeholder="YYYY"
-            variant="outlined"
-            sx={{
-              marginTop: "4px",
-              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: Colors.Purple,
+            <Button
+              type="submit"
+              sx={{
+                backgroundColor: Colors.Purple,
+                padding: "15px",
+                borderRadius: "50%",
+                "&:hover": {
+                  backgroundColor: Colors.OffBlack,
                 },
-              "& input": {
-                fontSize: "1.5rem",
-                fontWeight: 800,
-                color: Colors.OffBlack,
-                padding: "12px",
-              },
-            }}
-          />
-          <Typography
-            variant="caption"
-            sx={{
-              fontFamily: "Poppins",
-              marginTop: "5px",
-              fontStyle: "italic",
-              color: Colors.LightRed,
-              fontWeight: 400,
-              display: "block",
-              visibility: "hidden",
-            }}
-          >
-            Error
-          </Typography>
+              }}
+            >
+              <Avatar src={iconArrow} alt="icon-arrow"></Avatar>
+            </Button>
+          </Divider>
         </Box>
       </Container>
     </ThemeProvider>
