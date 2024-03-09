@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Box, InputLabel, TextField, Typography } from "@mui/material";
 import Colors from "../utils/Colors";
+import { AgeCalculatorContext } from "./context/ageCalculatorContext";
 
 const SingleDate = ({ name, placeholder }) => {
+  const { dates, setDates, errors } = useContext(AgeCalculatorContext);
+
   return (
     <Box
       sx={{
@@ -12,7 +15,7 @@ const SingleDate = ({ name, placeholder }) => {
       <InputLabel
         htmlFor={name}
         sx={{
-          color: Colors.SmokeyGrey,
+          color: errors[name] ? Colors.LightRed : Colors.SmokeyGrey,
           fontWeight: 700,
           letterSpacing: "2px",
           fontSize: "0.8rem",
@@ -21,11 +24,15 @@ const SingleDate = ({ name, placeholder }) => {
         {name}
       </InputLabel>
       <TextField
+        onChange={(e) => setDates({ ...dates, [name]: e.target.value })}
         id={name}
         placeholder={placeholder}
         variant="outlined"
         sx={{
           marginTop: "4px",
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: errors[name] ? Colors.LightRed : Colors.LightGrey,
+          },
           "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
             {
               borderColor: Colors.Purple,
@@ -46,10 +53,10 @@ const SingleDate = ({ name, placeholder }) => {
           fontStyle: "italic",
           color: Colors.LightRed,
           fontWeight: 400,
-          display: "none",
+          display: errors[name] ? "block" : "none",
         }}
       >
-        Error
+        {errors[name]}
       </Typography>
     </Box>
   );
