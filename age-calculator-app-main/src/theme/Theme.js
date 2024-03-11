@@ -13,4 +13,10 @@ export const Theme = createTheme({
     fontWeightMedium: 700,
     fontWeightBold: 800,
   },
+  breakpoints: {
+    values: {
+      md: 768,
+      sm: 576,
+    },
+  },
 });

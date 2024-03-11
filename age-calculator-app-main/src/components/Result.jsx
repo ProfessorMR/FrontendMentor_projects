@@ -1,13 +1,34 @@
 import React, { useContext } from "react";
-import { Typography,Box } from "@mui/material";
+import { Box } from "@mui/material";
 import colors from "../utils/Colors";
 import { AgeCalculatorContext } from "./context/ageCalculatorContext";
+import { styled } from "@mui/material/styles";
 
 const Result = ({ nameResult, name }) => {
   const { results } = useContext(AgeCalculatorContext);
 
+  const StyledBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("md")]: {
+      fontSize: "4.5rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "3.5rem",
+    },
+  }));
+
+  const StyledTypography = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("md")]: {
+      fontSize: "4.5rem",
+      letterSpacing: "10px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "3.5rem",
+      letterSpacing: "2px",
+    },
+  }));
+
   return (
-    <Box
+    <StyledBox
       sx={{
         fontWeight: 800,
         fontFamily: "Poppins",
@@ -19,7 +40,7 @@ const Result = ({ nameResult, name }) => {
         lineHeight: 1.2,
       }}
     >
-      <Typography
+      <StyledTypography
         sx={{
           color: colors.Purple,
           fontWeight: 800,
@@ -30,9 +51,9 @@ const Result = ({ nameResult, name }) => {
         }}
       >
         {results[name]}
-      </Typography>
+      </StyledTypography>
       {nameResult}
-    </Box>
+    </StyledBox>
   );
 };
 

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import colors from "../utils/Colors";
 import InputDates from "./InputDates";
 import Results from "./Results";
+import { ThemeProvider } from "@emotion/react";
+import { Theme } from "../theme/Theme";
 import { AgeCalculatorContext } from "./context/ageCalculatorContext";
 
 const BoxContainer = () => {
+  const theme = useTheme();
+
   const currentYear = new Date().getFullYear();
 
   const [dates, setDates] = useState({ DAY: "", MONTH: "", YEAR: "" });
@@ -26,6 +30,8 @@ const BoxContainer = () => {
 
   const isValid = (day, month, year) => {
     if (month === 0 || year === 0) {
+      return true;
+    } else if (month >= 12) {
       return true;
     } else {
       return (
@@ -134,17 +140,22 @@ const BoxContainer = () => {
 
   return (
     <AgeCalculatorContext.Provider value={{ dates, setDates, errors, results }}>
-      <Box
-        sx={{
-          backgroundColor: colors.White,
-          width: "700px",
-          borderRadius: "20px 20px 150px 20px",
-          padding: "30px",
-        }}
-      >
-        <InputDates validationsForm={validationsForm} />
-        <Results />
-      </Box>
+      <ThemeProvider theme={Theme}>
+        <Box
+          sx={{
+            backgroundColor: colors.White,
+            width: "700px",
+            borderRadius: "20px 20px 150px 20px",
+            padding: "30px",
+            [theme.breakpoints.down("sm")]: {
+              width: "95%",
+            },
+          }}
+        >
+          <InputDates validationsForm={validationsForm} />
+          <Results />
+        </Box>
+      </ThemeProvider>
     </AgeCalculatorContext.Provider>
   );
 };

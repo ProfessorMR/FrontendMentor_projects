@@ -5,7 +5,6 @@ import { AgeCalculatorContext } from "./context/ageCalculatorContext";
 
 const SingleDate = ({ name, placeholder }) => {
   const { dates, setDates, errors } = useContext(AgeCalculatorContext);
-  console.log();
 
   return (
     <Box
@@ -29,6 +28,7 @@ const SingleDate = ({ name, placeholder }) => {
         id={name}
         placeholder={placeholder}
         variant="outlined"
+        value={dates[name]}
         sx={{
           marginTop: "4px",
           "& .MuiOutlinedInput-notchedOutline": {
