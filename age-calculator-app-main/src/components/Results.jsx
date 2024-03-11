@@ -7,7 +7,7 @@ const Results = () => {
   return (
     <Box sx={{ padding: "0 30px" }}>
       {Data.map((d) => (
-        <Result key={d.id} nameResult={d.name_result} />
+        <Result key={d.id} nameResult={d.name_result} name={d.name} />
       ))}
     </Box>
   );

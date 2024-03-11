@@ -5,6 +5,7 @@ import { AgeCalculatorContext } from "./context/ageCalculatorContext";
 
 const SingleDate = ({ name, placeholder }) => {
   const { dates, setDates, errors } = useContext(AgeCalculatorContext);
+  console.log();
 
   return (
     <Box
@@ -15,7 +16,7 @@ const SingleDate = ({ name, placeholder }) => {
       <InputLabel
         htmlFor={name}
         sx={{
-          color: errors[name] ? Colors.LightRed : Colors.SmokeyGrey,
+          color: errors[name][1] ? Colors.LightRed : Colors.SmokeyGrey,
           fontWeight: 700,
           letterSpacing: "2px",
           fontSize: "0.8rem",
@@ -31,7 +32,7 @@ const SingleDate = ({ name, placeholder }) => {
         sx={{
           marginTop: "4px",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: errors[name] ? Colors.LightRed : Colors.LightGrey,
+            borderColor: errors[name][1] ? Colors.LightRed : Colors.LightGrey,
           },
           "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
             {
@@ -53,10 +54,10 @@ const SingleDate = ({ name, placeholder }) => {
           fontStyle: "italic",
           color: Colors.LightRed,
           fontWeight: 400,
-          display: errors[name] ? "block" : "none",
+          display: errors[name][1] ? "block" : "none",
         }}
       >
-        {errors[name]}
+        {errors[name][0]}
       </Typography>
     </Box>
   );

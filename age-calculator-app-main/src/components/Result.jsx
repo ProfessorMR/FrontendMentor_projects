@@ -1,10 +1,13 @@
-import React from "react";
-import { Typography } from "@mui/material";
+import React, { useContext } from "react";
+import { Typography,Box } from "@mui/material";
 import colors from "../utils/Colors";
+import { AgeCalculatorContext } from "./context/ageCalculatorContext";
 
-const Result = ({ nameResult }) => {
+const Result = ({ nameResult, name }) => {
+  const { results } = useContext(AgeCalculatorContext);
+
   return (
-    <Typography
+    <Box
       sx={{
         fontWeight: 800,
         fontFamily: "Poppins",
@@ -26,10 +29,10 @@ const Result = ({ nameResult }) => {
           lineHeight: 1,
         }}
       >
-        --
+        {results[name]}
       </Typography>
       {nameResult}
-    </Typography>
+    </Box>
   );
 };
 
