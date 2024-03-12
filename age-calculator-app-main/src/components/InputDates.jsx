@@ -3,7 +3,6 @@ import {
   Container,
   Box,
   Divider,
-  Avatar,
   Button,
   useTheme,
 } from "@mui/material";
@@ -48,7 +47,8 @@ const InputDates = ({ validationsForm }) => {
       <Box sx={{ position: "relative" }}>
         <Divider sx={dividerStyles} />
         <Button
-          type="submit"A
+          type="submit"
+          A
           sx={{
             backgroundColor: Colors.Purple,
             padding: "15px",
@@ -66,10 +66,10 @@ const InputDates = ({ validationsForm }) => {
             },
           }}
         >
-          <Avatar
+          <img
             src={iconArrow}
             alt="icon-arrow"
-            sx={{ width: "35px", height: "35px" }}
+            style={{ width: "35px", height: "35px" }}
           />
         </Button>
       </Box>
