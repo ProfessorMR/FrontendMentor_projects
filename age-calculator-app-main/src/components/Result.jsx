@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import colors from "../utils/Colors";
 import { AgeCalculatorContext } from "./context/ageCalculatorContext";
 import { styled } from "@mui/material/styles";
@@ -16,7 +16,7 @@ const Result = ({ nameResult, name }) => {
     },
   }));
 
-  const StyledTypography = styled(Box)(({ theme }) => ({
+  const StyledTypography = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.down("md")]: {
       fontSize: "4.5rem",
       letterSpacing: "10px",
@@ -41,6 +41,7 @@ const Result = ({ nameResult, name }) => {
       }}
     >
       <StyledTypography
+        variant="h1"
         sx={{
           color: colors.Purple,
           fontWeight: 800,

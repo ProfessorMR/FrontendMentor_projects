@@ -16,6 +16,7 @@ const InputDates = ({ validationsForm }) => {
   const theme = useTheme();
 
   const flexBoxStyles = {
+    marginBlock: "40px",
     display: "flex",
     justifyContent: "space-between",
     width: "80%",
@@ -25,18 +26,8 @@ const InputDates = ({ validationsForm }) => {
   };
 
   const dividerStyles = {
-    textAlign: "right",
-    ".MuiDivider-wrapper": {
-      padding: 0,
-    },
-    "&.MuiDivider-root::after": {
-      width: 0,
-    },
     [theme.breakpoints.down("md")]: {
-      marginBlock: "30px",
-      "&.MuiDivider-root::after": {
-        width: "100%",
-      },
+      marginBlock: "55px",
     },
   };
 
@@ -48,30 +39,39 @@ const InputDates = ({ validationsForm }) => {
       style={{ maxWidth: "100%" }}
     >
       <Box sx={flexBoxStyles}>
-        {Data.map((d) => (
-          <SingleDate name={d.name} placeholder={d.placeholder} key={d.id} />
-        ))}
+        {Data.slice()
+          .reverse()
+          .map((d) => (
+            <SingleDate name={d.name} placeholder={d.placeholder} key={d.id} />
+          ))}
       </Box>
-      <Box>
-        <Divider sx={dividerStyles}>
-          <Button
-            type="submit"
-            sx={{
-              backgroundColor: Colors.Purple,
-              padding: "15px",
-              borderRadius: "50%",
-              "&:hover": {
-                backgroundColor: Colors.OffBlack,
-              },
-            }}
-          >
-            <Avatar
-              src={iconArrow}
-              alt="icon-arrow"
-              sx={{ width: "35px", height: "35px" }}
-            />
-          </Button>
-        </Divider>
+      <Box sx={{ position: "relative" }}>
+        <Divider sx={dividerStyles} />
+        <Button
+          type="submit"A
+          sx={{
+            backgroundColor: Colors.Purple,
+            padding: "15px",
+            borderRadius: "50%",
+            position: "absolute",
+            right: "0",
+            top: "-30px",
+            zIndex: "1",
+            "&:hover": {
+              backgroundColor: Colors.OffBlack,
+            },
+            [theme.breakpoints.down("md")]: {
+              right: "50%",
+              transform: "translateX(50%)",
+            },
+          }}
+        >
+          <Avatar
+            src={iconArrow}
+            alt="icon-arrow"
+            sx={{ width: "35px", height: "35px" }}
+          />
+        </Button>
       </Box>
     </Container>
   );
