@@ -57,7 +57,7 @@ const BoxContainer = () => {
     if (currentMonth >= +dates.MONTH) {
       calcMonth = currentMonth - +dates.MONTH;
     } else {
-      currentYear -= 1;
+      calcYear -= 1;
       calcMonth = 12 + currentMonth - +dates.MONTH;
     }
 
