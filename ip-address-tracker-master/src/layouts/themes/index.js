@@ -10,5 +10,15 @@ export const theme = createTheme({
       }`,
     },
   },
+  typography: {
+    fontFamily: ["Rubik", "serif"].join(","),
+  },
+  palette: {
+    primary: {
+      main: "hsl(0, 0%, 17%)",
+    },
+    secondary: {
+      main: "hsl(0, 0%, 59%)",
+    },
+  },
 });
-

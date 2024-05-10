@@ -2,6 +2,7 @@ import HeaderIpTracker from "./components/HeaderIpTracker";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { theme } from "./layouts/themes";
+import "./App.css";
 
 const App = () => {
   return (
