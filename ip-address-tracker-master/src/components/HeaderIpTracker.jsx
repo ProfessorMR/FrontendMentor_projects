@@ -10,6 +10,7 @@ const HeaderIpTracker = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         width: "100%",
+        height: "35vh",
       }}
       component="header"
     >
@@ -26,10 +27,7 @@ const HeaderIpTracker = () => {
         <Typography variant="h5" sx={{ color: "white", fontWeight: "700" }}>
           IP Address Tracker
         </Typography>
-        <Paper
-          component="form"
-          sx={{ mb: "5.5rem",mt: "1.5rem", borderRadius: "10px" }}
-        >
+        <Paper component="form" sx={{ mt: "1.5rem", borderRadius: "10px" }}>
           <InputBase
             sx={{ ml: 1, width: "30rem", p: "10px" }}
             placeholder="Search for any ip address and domain"
