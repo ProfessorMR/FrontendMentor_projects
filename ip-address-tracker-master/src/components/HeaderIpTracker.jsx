@@ -1,6 +1,7 @@
 import { Box, Typography, Paper, InputBase, IconButton } from "@mui/material";
 import patternBgDesktop from "../assets/images/pattern-bg-desktop.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import ShowResultSearch from "./ShowResultSearch";
 
 const HeaderIpTracker = () => {
   return (
@@ -10,7 +11,11 @@ const HeaderIpTracker = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         width: "100%",
-        height: "35vh",
+        height: "250px",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
       component="header"
     >
@@ -27,7 +32,7 @@ const HeaderIpTracker = () => {
         <Typography variant="h5" sx={{ color: "white", fontWeight: "700" }}>
           IP Address Tracker
         </Typography>
-        <Paper component="form" sx={{ mt: "1.5rem", borderRadius: "10px" }}>
+        <Paper component="form" sx={{ mt: "1.5rem", borderRadius: "15px" }}>
           <InputBase
             sx={{ ml: 1, width: "30rem", p: "10px" }}
             placeholder="Search for any ip address and domain"
@@ -37,7 +42,7 @@ const HeaderIpTracker = () => {
             sx={{
               p: "15px",
               backgroundColor: "text.primary",
-              borderRadius: " 0 10px 10px 0",
+              borderRadius: " 0 15px 15px 0",
               "&:hover": {
                 backgroundColor: "hsl(0, 0%, 25%)",
               },
@@ -48,6 +53,7 @@ const HeaderIpTracker = () => {
           </IconButton>
         </Paper>
       </Box>
+      <ShowResultSearch />
     </Box>
   );
 };

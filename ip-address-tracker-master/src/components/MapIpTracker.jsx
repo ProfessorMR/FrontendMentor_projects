@@ -13,8 +13,9 @@ const MapIpTracker = () => {
     <>
       <MapContainer
         center={[51.505, -0.09]}
+        zoomControl={false}
         zoom={15}
-        style={{ height: "65vh" }}
+        style={{ minHeight: "70vh" }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
