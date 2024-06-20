@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { theme } from "./layouts/themes";
 import { Box } from "@mui/material";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <CssBaseline />
         <HeaderIpTracker />
         <MapIpTracker />
+        <ToastContainer />
       </Box>
     </ThemeProvider>
   );

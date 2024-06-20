@@ -1,6 +1,9 @@
 import { Typography, Grid, Box } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const ShowResultSearch = () => {
+  const { item: infoIp, status } = useSelector((state) => state.ip);
+
   return (
     <Box
       sx={{
@@ -33,7 +36,7 @@ const ShowResultSearch = () => {
             IP ADDRESS
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            192.100.130.12
+            {status === "pending" ? "-" : infoIp.ip ? infoIp.ip : "-"}
           </Typography>
         </Grid>
         <Grid
@@ -53,7 +56,11 @@ const ShowResultSearch = () => {
             LOCATION
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            BROOKLYN, NY, 10001
+            {status === "pending"
+              ? "-"
+              : infoIp.location
+              ? `${infoIp.location.country} ${infoIp.location.region} ${infoIp.location.city}`
+              : "-"}
           </Typography>
         </Grid>
         <Grid
@@ -73,7 +80,11 @@ const ShowResultSearch = () => {
             TIME ZONE
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            UTC -05:00
+            {status === "pending"
+              ? "-"
+              : status === "success" && infoIp.location.timezone
+              ? infoIp.location.timezone
+              : "-"}
           </Typography>
         </Grid>
         <Grid
@@ -91,7 +102,11 @@ const ShowResultSearch = () => {
             ISP
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            SPACEX STARLINK
+            {status === "pending"
+              ? "-"
+              : status === "success" && infoIp.isp
+              ? infoIp.isp
+              : "-"}
           </Typography>
         </Grid>
       </Grid>
