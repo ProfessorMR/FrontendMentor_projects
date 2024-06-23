@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const SERVER_URL = "https://geo.ipify.org/api/v2/country,city?";
-const API_KEY = "at_2FnWbXYu3zfhyiCXoL4YjOfYFetKH";
+const API_KEY = "at_xRpKkpw6RC9b0otUbYYUm7e2JOgp3";
 
 export const getGeoData = (keySearch, valueSearch) => {
   try {

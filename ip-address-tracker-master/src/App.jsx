@@ -6,14 +6,17 @@ import { theme } from "./layouts/themes";
 import { Box } from "@mui/material";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
+import { useState } from "react";
 
 const App = () => {
+  const [errorMapContainer, setErrorMapContainer] = useState(false);
+
   return (
     <ThemeProvider theme={theme}>
       <Box component="main">
         <CssBaseline />
-        <HeaderIpTracker />
-        <MapIpTracker />
+        <HeaderIpTracker setErrorMapContainer={setErrorMapContainer} />
+        <MapIpTracker errorMapContainer={errorMapContainer} />
         <ToastContainer />
       </Box>
     </ThemeProvider>

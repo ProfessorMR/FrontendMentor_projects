@@ -5,8 +5,9 @@ import { useSelector } from "react-redux";
 import iconLocation from "../assets/images/icon-location.svg";
 import "leaflet/dist/leaflet.css";
 import Spinner from "./Spinner";
+import PropTypes from "prop-types";
 
-const MapIpTracker = () => {
+const MapIpTracker = ({ errorMapContainer }) => {
   const [coordinates, setCoordinates] = useState([51.505, -0.09]);
   const { item: infoIp, status } = useSelector((state) => state.ip);
 
@@ -23,7 +24,7 @@ const MapIpTracker = () => {
 
   return (
     <>
-      {status === "pending" || status === "rejected" ? (
+      {status === "pending" || status === "rejected" || errorMapContainer ? (
         <Spinner />
       ) : (
         <MapContainer
@@ -42,6 +43,10 @@ const MapIpTracker = () => {
       )}
     </>
   );
+};
+
+MapIpTracker.propTypes = {
+  errorMapContainer: PropTypes.bool.isRequired,
 };
 
 export default MapIpTracker;

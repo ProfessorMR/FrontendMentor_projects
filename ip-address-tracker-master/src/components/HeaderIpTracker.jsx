@@ -6,8 +6,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchGeodata } from "../reducers/ipSlice";
 import { showToastError } from "../helper";
+import PropTypes from "prop-types";
 
-const HeaderIpTracker = () => {
+const HeaderIpTracker = ({ setErrorMapContainer }) => {
   const [search, setSearch] = useState("");
   const [errorSubmit, setErrorSubmit] = useState(false);
 
@@ -41,6 +42,7 @@ const HeaderIpTracker = () => {
     } else {
       showToastError();
       setErrorSubmit(true);
+      setErrorMapContainer(true);
     }
   };
 
@@ -108,6 +110,10 @@ const HeaderIpTracker = () => {
       <ShowResultSearch errorSubmit={errorSubmit} />
     </Box>
   );
+};
+
+HeaderIpTracker.propTypes = {
+  setErrorMapContainer: PropTypes.func.isRequired,
 };
 
 export default HeaderIpTracker;
