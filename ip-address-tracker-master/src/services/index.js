@@ -16,6 +16,6 @@ export const getGeoData = (keySearch, valueSearch) => {
 
     return response;
   } catch (err) {
-    console.log(err);
+    return null;
   }
 };

@@ -1,8 +1,12 @@
 import { Typography, Grid, Box } from "@mui/material";
 import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 
-const ShowResultSearch = () => {
+const ShowResultSearch = ({ errorSubmit }) => {
   const { item: infoIp, status } = useSelector((state) => state.ip);
+
+  const isPending = status === "pending";
+  const isRejected = status === "rejected";
 
   return (
     <Box
@@ -36,7 +40,13 @@ const ShowResultSearch = () => {
             IP ADDRESS
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            {status === "pending" ? "-" : infoIp.ip ? infoIp.ip : "-"}
+            {isRejected || errorSubmit
+              ? "-"
+              : isPending
+              ? "-"
+              : infoIp.ip
+              ? infoIp.ip
+              : "-"}
           </Typography>
         </Grid>
         <Grid
@@ -56,7 +66,9 @@ const ShowResultSearch = () => {
             LOCATION
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            {status === "pending"
+            {isRejected || errorSubmit
+              ? "-"
+              : isPending
               ? "-"
               : infoIp.location
               ? `${infoIp.location.country} ${infoIp.location.region} ${infoIp.location.city}`
@@ -80,9 +92,11 @@ const ShowResultSearch = () => {
             TIME ZONE
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            {status === "pending"
+            {isRejected || errorSubmit
               ? "-"
-              : status === "success" && infoIp.location.timezone
+              : isPending
+              ? "-"
+              : infoIp.location && infoIp.location.timezone
               ? infoIp.location.timezone
               : "-"}
           </Typography>
@@ -102,9 +116,11 @@ const ShowResultSearch = () => {
             ISP
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
-            {status === "pending"
+            {isRejected || errorSubmit
               ? "-"
-              : status === "success" && infoIp.isp
+              : isPending
+              ? "-"
+              : infoIp.isp
               ? infoIp.isp
               : "-"}
           </Typography>
@@ -112,6 +128,10 @@ const ShowResultSearch = () => {
       </Grid>
     </Box>
   );
+};
+
+ShowResultSearch.propTypes = {
+  errorSubmit: PropTypes.bool.isRequired,
 };
 
 export default ShowResultSearch;

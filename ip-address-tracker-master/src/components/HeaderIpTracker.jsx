@@ -3,19 +3,23 @@ import patternBgDesktop from "../assets/images/pattern-bg-desktop.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ShowResultSearch from "./ShowResultSearch";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchGeodata } from "../reducers/ipSlice";
-import { toast } from "react-toastify";
+import { showToastError } from "../helper";
 
 const HeaderIpTracker = () => {
   const [search, setSearch] = useState("");
+  const [errorSubmit, setErrorSubmit] = useState(false);
+
   const dispatch = useDispatch();
+  const { status, error } = useSelector((state) => state.ip);
 
   const ip4RegEx =
     /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]).){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/;
   const ip6RegEx =
     /^((([0-9A-Fa-f]{1,4}:){1,6}:)|(([0-9A-Fa-f]{1,4}:){7}))([0-9A-Fa-f]{1,4})$/;
-  const domainRegEx = /^((?!-)[A-Za-z0-9-]{1, 63}(?<!-)\\.)+[A-Za-z]{2, 6}$/;
+  const domainRegEx =
+    /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/;
 
   useEffect(() => {
     dispatch(fetchGeodata({ initKeySearch: "", initValueSearch: "" }));
@@ -28,23 +32,23 @@ const HeaderIpTracker = () => {
       dispatch(
         fetchGeodata({ initKeySearch: "ipAddress", initValueSearch: search })
       );
+      setErrorSubmit(false);
     } else if (domainRegEx.test(search)) {
       dispatch(
         fetchGeodata({ initKeySearch: "domain", initValueSearch: search })
       );
+      setErrorSubmit(false);
     } else {
-      toast.error("Please enter a valid IP address or domain.", {
-        position: "bottom-left",
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      showToastError();
+      setErrorSubmit(true);
     }
   };
+
+  useEffect(() => {
+    if (status === "rejected") {
+      showToastError(error);
+    }
+  }, [status, error]);
 
   return (
     <Box
@@ -101,7 +105,7 @@ const HeaderIpTracker = () => {
           </IconButton>
         </Paper>
       </Box>
-      <ShowResultSearch />
+      <ShowResultSearch errorSubmit={errorSubmit} />
     </Box>
   );
 };
