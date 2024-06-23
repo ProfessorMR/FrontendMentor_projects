@@ -7,6 +7,7 @@ import {
   useTheme,
 } from "@mui/material";
 import patternBgDesktop from "../assets/images/pattern-bg-desktop.png";
+import patternBgMobile from "../assets/images/pattern-bg-mobile.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ShowResultSearch from "./ShowResultSearch";
 import { useEffect, useState } from "react";
@@ -95,21 +96,23 @@ const HeaderIpTracker = ({ setErrorMapContainer }) => {
     },
   };
 
+  const headerStyle = {
+    backgroundImage: `url(${patternBgDesktop})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    width: "100%",
+    height: "260px",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      backgroundImage: `url(${patternBgMobile})`,
+    },
+  };
+
   return (
-    <Box
-      sx={{
-        backgroundImage: `url(${patternBgDesktop})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        width: "100%",
-        height: "260px",
-        position: "relative",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-      component="header"
-    >
+    <Box sx={headerStyle} component="header">
       <Box component="div" sx={boxContainerForm}>
         <Typography variant="h5" sx={{ color: "white", fontWeight: "700" }}>
           IP Address Tracker

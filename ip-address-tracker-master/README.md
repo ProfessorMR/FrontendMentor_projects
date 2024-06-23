@@ -1,8 +1,24 @@
-# React + Vite
+# Frontend Mentor - Ip address tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to Ip address tracker challenge on frontend mentor
 
-Currently, two official plugins are available:
+## Screenshot 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Design preview for ip address tracker challenge coding challenge](./src/assets/images/desktop-preview.jpg)
+
+## Built with
+
+- React js
+- React redux
+- Redux toolkit
+- Css
+- Flexbox
+- Media query
+- MUI
+- axios
+- leaflet
+- vite
+
+## Author
+
+- Github - [ProfessorMR](https://github.com/ProfessorMR/)
