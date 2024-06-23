@@ -57,7 +57,7 @@ const HeaderIpTracker = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         width: "100%",
-        height: "250px",
+        height: "260px",
         position: "relative",
         display: "flex",
         flexDirection: "column",

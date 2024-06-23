@@ -16,6 +16,8 @@ const ShowResultSearch = ({ errorSubmit }) => {
         bottom: 0,
         transform: "translateY(50%)",
         zIndex: "1000",
+        borderRadius: "10px",
+        boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.2)",
       }}
     >
       <Grid
