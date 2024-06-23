@@ -1,4 +1,11 @@
-import { Box, Typography, Paper, InputBase, IconButton } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Paper,
+  InputBase,
+  IconButton,
+  useTheme,
+} from "@mui/material";
 import patternBgDesktop from "../assets/images/pattern-bg-desktop.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ShowResultSearch from "./ShowResultSearch";
@@ -52,6 +59,42 @@ const HeaderIpTracker = ({ setErrorMapContainer }) => {
     }
   }, [status, error]);
 
+  const theme = useTheme();
+
+  const inputSearchStyle = {
+    ml: 1,
+    width: "37rem",
+    p: "10px",
+    [theme.breakpoints.down("md")]: {
+      width: "95%",
+    },
+  };
+
+  const boxContainerForm = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    padding: "30px",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      padding: "15px",
+    },
+  };
+
+  const formStyle = {
+    mt: "1.5rem",
+    borderRadius: "15px",
+    display: "flex",
+    width: "100%",
+    [theme.breakpoints.down("md")]: {
+      width: "80%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
+  };
+
   return (
     <Box
       sx={{
@@ -67,26 +110,13 @@ const HeaderIpTracker = ({ setErrorMapContainer }) => {
       }}
       component="header"
     >
-      <Box
-        component="div"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          padding: "30px",
-        }}
-      >
+      <Box component="div" sx={boxContainerForm}>
         <Typography variant="h5" sx={{ color: "white", fontWeight: "700" }}>
           IP Address Tracker
         </Typography>
-        <Paper
-          component="form"
-          sx={{ mt: "1.5rem", borderRadius: "15px" }}
-          onSubmit={handleSubmitForm}
-        >
+        <Paper component="form" sx={formStyle} onSubmit={handleSubmitForm}>
           <InputBase
-            sx={{ ml: 1, width: "30rem", p: "10px" }}
+            sx={inputSearchStyle}
             placeholder="Search for any ip address and domain"
             value={search}
             onChange={(e) => setSearch(e.target.value)}

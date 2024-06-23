@@ -1,4 +1,4 @@
-import { Typography, Grid, Box } from "@mui/material";
+import { Typography, Grid, Box, useTheme, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
 
@@ -8,18 +8,28 @@ const ShowResultSearch = ({ errorSubmit }) => {
   const isPending = status === "pending";
   const isRejected = status === "rejected";
 
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.down("lg"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const showResultBoxStyle = {
+    width: "75rem",
+    position: "absolute",
+    bottom: 0,
+    transform: "translateY(50%)",
+    zIndex: "1000",
+    borderRadius: "10px",
+    boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.2)",
+    [theme.breakpoints.down("xl")]: {
+      width: "90%",
+    },
+    [theme.breakpoints.down("md")]: {
+      transform: "translateY(65%)",
+    },
+  };
+
   return (
-    <Box
-      sx={{
-        width: "75rem",
-        position: "absolute",
-        bottom: 0,
-        transform: "translateY(50%)",
-        zIndex: "1000",
-        borderRadius: "10px",
-        boxShadow: "1px 1px 5px rgba(0, 0, 0, 0.2)",
-      }}
-    >
+    <Box sx={showResultBoxStyle}>
       <Grid
         container
         sx={{
@@ -31,8 +41,15 @@ const ShowResultSearch = ({ errorSubmit }) => {
       >
         <Grid
           item
-          xs={3}
-          sx={{ borderRight: 1, borderColor: "secondary.main" }}
+          xs={12}
+          sm={12}
+          md={6}
+          lg={3}
+          sx={
+            !isMobile
+              ? { borderRight: 1, borderColor: "secondary.main" }
+              : { textAlign: "center" }
+          }
         >
           <Typography
             variant="caption"
@@ -41,7 +58,10 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             IP ADDRESS
           </Typography>
-          <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
+          <Typography
+            variant={isTablet ? "h6" : "h5"}
+            sx={{ fontWeight: 700, mt: 1 }}
+          >
             {isRejected || errorSubmit
               ? "-"
               : isPending
@@ -53,12 +73,21 @@ const ShowResultSearch = ({ errorSubmit }) => {
         </Grid>
         <Grid
           item
-          xs={3}
-          sx={{
-            borderRight: 1,
-            borderColor: "secondary.main",
-            padding: "0 25px",
-          }}
+          xs={12}
+          sm={12}
+          md={6}
+          lg={3}
+          sx={
+            !isTablet
+              ? {
+                  borderRight: 1,
+                  borderColor: "secondary.main",
+                  padding: "0 25px",
+                }
+              : isMobile
+              ? { textAlign: "center" }
+              : { padding: "0 25px" }
+          }
         >
           <Typography
             variant="caption"
@@ -67,7 +96,10 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             LOCATION
           </Typography>
-          <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
+          <Typography
+            variant={isTablet ? "h6" : "h5"}
+            sx={{ fontWeight: 700, mt: 1 }}
+          >
             {isRejected || errorSubmit
               ? "-"
               : isPending
@@ -79,12 +111,21 @@ const ShowResultSearch = ({ errorSubmit }) => {
         </Grid>
         <Grid
           item
-          xs={3}
-          sx={{
-            borderRight: 1,
-            borderColor: "secondary.main",
-            padding: "0 25px",
-          }}
+          xs={12}
+          sm={12}
+          md={6}
+          lg={3}
+          sx={
+            !isTablet
+              ? {
+                  borderRight: 1,
+                  borderColor: "secondary.main",
+                  padding: "0 25px",
+                }
+              : isMobile
+              ? { textAlign: "center" }
+              : { borderRight: 1, borderColor: "secondary.main", padding: "0" }
+          }
         >
           <Typography
             variant="caption"
@@ -93,7 +134,10 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             TIME ZONE
           </Typography>
-          <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
+          <Typography
+            variant={isTablet ? "h6" : "h5"}
+            sx={{ fontWeight: 700, mt: 1 }}
+          >
             {isRejected || errorSubmit
               ? "-"
               : isPending
@@ -105,10 +149,17 @@ const ShowResultSearch = ({ errorSubmit }) => {
         </Grid>
         <Grid
           item
-          xs={3}
-          sx={{
-            padding: "0 25px",
-          }}
+          xs={12}
+          sm={12}
+          md={6}
+          lg={3}
+          sx={
+            !isMobile
+              ? {
+                  padding: "0 25px",
+                }
+              : { textAlign: "center" }
+          }
         >
           <Typography
             variant="caption"
@@ -117,7 +168,10 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             ISP
           </Typography>
-          <Typography variant="h5" sx={{ fontWeight: 700, mt: 1 }}>
+          <Typography
+            variant={isTablet ? "h6" : "h5"}
+            sx={{ fontWeight: 700, mt: 1 }}
+          >
             {isRejected || errorSubmit
               ? "-"
               : isPending
