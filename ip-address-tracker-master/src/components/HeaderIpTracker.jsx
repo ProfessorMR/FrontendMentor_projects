@@ -42,11 +42,13 @@ const HeaderIpTracker = ({ setErrorMapContainer }) => {
         fetchGeodata({ initKeySearch: "ipAddress", initValueSearch: search })
       );
       setErrorSubmit(false);
+      setErrorMapContainer(false);
     } else if (domainRegEx.test(search)) {
       dispatch(
         fetchGeodata({ initKeySearch: "domain", initValueSearch: search })
       );
       setErrorSubmit(false);
+      setErrorMapContainer(false);
     } else {
       showToastError();
       setErrorSubmit(true);
