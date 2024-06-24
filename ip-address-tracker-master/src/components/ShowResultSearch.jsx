@@ -28,6 +28,15 @@ const ShowResultSearch = ({ errorSubmit }) => {
     },
   };
 
+  const resultTypeStyle = {
+    fontWeight: 700,
+    mt: 1,
+    fontSize: "1.5rem",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "1.3rem",
+    },
+  };
+
   return (
     <Box sx={showResultBoxStyle}>
       <Grid
@@ -58,10 +67,7 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             IP ADDRESS
           </Typography>
-          <Typography
-            variant={isTablet ? "h6" : "h5"}
-            sx={{ fontWeight: 700, mt: 1 }}
-          >
+          <Typography variant="h1" sx={resultTypeStyle}>
             {isRejected || errorSubmit
               ? "-"
               : isPending
@@ -96,10 +102,7 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             LOCATION
           </Typography>
-          <Typography
-            variant={isTablet ? "h6" : "h5"}
-            sx={{ fontWeight: 700, mt: 1 }}
-          >
+          <Typography variant="h1" sx={resultTypeStyle}>
             {isRejected || errorSubmit
               ? "-"
               : isPending
@@ -134,10 +137,7 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             TIME ZONE
           </Typography>
-          <Typography
-            variant={isTablet ? "h6" : "h5"}
-            sx={{ fontWeight: 700, mt: 1 }}
-          >
+          <Typography variant="h1" sx={resultTypeStyle}>
             {isRejected || errorSubmit
               ? "-"
               : isPending
@@ -168,10 +168,7 @@ const ShowResultSearch = ({ errorSubmit }) => {
           >
             ISP
           </Typography>
-          <Typography
-            variant={isTablet ? "h6" : "h5"}
-            sx={{ fontWeight: 700, mt: 1 }}
-          >
+          <Typography variant="h1" sx={resultTypeStyle}>
             {isRejected || errorSubmit
               ? "-"
               : isPending
