@@ -116,7 +116,7 @@ const HeaderIpTracker = ({ setErrorMapContainer }) => {
   return (
     <Box sx={headerStyle} component="header">
       <Box component="div" sx={boxContainerForm}>
-        <Typography variant="h5" sx={{ color: "white", fontWeight: "700" }}>
+        <Typography variant="h1" sx={{ color: "white", fontWeight: "700",fontSize:"1.4rem" }}>
           IP Address Tracker
         </Typography>
         <Paper component="form" sx={formStyle} onSubmit={handleSubmitForm}>
